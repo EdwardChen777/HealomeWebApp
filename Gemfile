@@ -43,6 +43,18 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'hirb', '0.7.3'
+  gem 'faker', '2.16.0'
+  gem 'populator', '1.0.0'
+  gem 'factory_bot_rails', '6.2.0'
+  gem 'simplecov', '0.21.2'
+  gem 'shoulda', '4.0.0'
+  gem 'shoulda-matchers', '4.5.1'
+  gem 'rails-controller-testing', '1.0.5'
+  gem 'cucumber', '5.3.0'
+  gem 'cucumber-rails', '2.2.0', require: false
+  gem 'database_cleaner', '2.0.1'
+  gem 'launchy', '2.5.0'
 end
 
 group :development do
@@ -55,8 +67,12 @@ group :development do
 end
 
 group :test do
+  gem 'minitest-rails', '3.0.0'
+  gem 'minitest-reporters', '1.1.19'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '3.35.3'
+  # Adds support for Capybara system testing and selenium driver
+  # gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
