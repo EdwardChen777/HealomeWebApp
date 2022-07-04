@@ -1,0 +1,2 @@
+class CognitoController < ApplicationController
+end
