@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+    has_many :cognito
     scope :by_role,      -> { order(:role) }
     scope :alphabetical,  -> { order(:last_name, :first_name) }
     scope :employees,    -> { where.not(role: 'customer') }
