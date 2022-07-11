@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.9'
 
+gem 'activerecord-session_store'
 gem 'excon'
 gem 'json-jwt'
 gem 'aws-sdk-cognitoidentity'

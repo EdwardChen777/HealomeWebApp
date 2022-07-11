@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
     @cognito_session = nil
 
     cognito_session = nil
-    if session[:cognito_session_id]
+    if session[:cognito_id]
       begin
-        cognito_session = CognitoSession.find(session[:cognito_session_id])
+        @cognito_session = Cognito.find(session[:cognito_id])
       rescue ActiveRecord::RecordNotFound
       end
     end
@@ -32,6 +32,8 @@ class ApplicationController < ActionController::Base
       @cognito_session = cognito_session
       return
     end
+
+    
 
     Rails.logger.info("Refreshing cognito session: #{cognito_session.id}")
 

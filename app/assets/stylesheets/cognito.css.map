@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "cognito.scss"
+    ],
+    "names": [],
+    "file": "cognito.css"
+}

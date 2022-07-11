@@ -33,6 +33,12 @@ GEM
       activemodel (= 5.2.8)
       activesupport (= 5.2.8)
       arel (>= 9.0)
+    activerecord-session_store (2.0.0)
+      actionpack (>= 5.2.4.1)
+      activerecord (>= 5.2.4.1)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 2.0.8, < 3)
+      railties (>= 5.2.4.1)
     activestorage (5.2.8)
       actionpack (= 5.2.8)
       activerecord (= 5.2.8)
@@ -191,6 +197,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.5.2)
+    multi_json (1.15.0)
     multi_test (0.1.2)
     nio4r (2.5.8)
     nokogiri (1.13.6-arm64-darwin)
@@ -310,6 +317,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  activerecord-session_store
   aws-sdk-cognitoidentity
   aws-sdk-cognitoidentityprovider
   bootsnap (>= 1.1.0)

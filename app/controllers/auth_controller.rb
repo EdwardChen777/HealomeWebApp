@@ -6,41 +6,47 @@ class AuthController < ApplicationController
       end
   
       resp = lookup_auth_code(params[:code])
+      
       unless resp
-        # redirect_to '/'
-        redirect_to home_path, notice: "IDK"
+        redirect_to '/'
+        # redirect_to home_path, notice: "IDK"
         return
       end
   
       ActiveRecord::Base.transaction do
-        user = User.where(subscriber: resp.id_token[:sub]).first
+        user = User.where(sub: resp.id_token[:sub]).first
         if user.nil?
-          user = User.create(subscriber: resp.id_token[:sub],
-                             email: resp.id_token[:email])
+            if resp.id_token[:email].nil?
+                user = User.create(sub: resp.id_token[:sub],
+                             phone: resp.id_token[:phone])
+            else
+                user = User.create(sub: resp.id_token[:sub],
+                    email: resp.id_token[:email])
+            end 
         end
   
-        cognito_session = CognitoSession.create(user: user,
+        cognito_session = Cognito.create(user: user,
                                                 expire_time: resp.id_token[:exp],
                                                 issued_time: resp.id_token[:auth_time],
                                                 audience: resp.id_token[:aud],
                                                 refresh_token: resp.refresh_token)
-        session[:cognito_session_id] = cognito_session.id
+        session[:cognito_id] = cognito_session.id
       end
   
       # Alternatively, you could redirect to a saved URL
-    #   redirect_to '/'
-      redirect_to home_path, notice: "Logged in!"
+      redirect_to '/'
+    #   redirect_to home_path, notice: "Logged in!"
     end
   
     def signout
-      if cognito_session_id = session[:cognito_session_id]
-        cognito_session = CognitoSession.find(cognito_session_id) rescue nil
+      if cognito_session_id = session[:cognito_id]
+        cognito_session = Cognito.find(cognito_session_id) rescue nil
         cognito_session.destroy if cognito_session
-        session.delete(:cognito_session_id)
+        session.delete(:cognito_id)
       end
   
-    #   redirect_to '/'
-      redirect_to home_path, notice: "Logged out!"
+      redirect_to '/'
+    #   redirect_to home_path, notice: "Logged out!"
     end
   
     def lookup_auth_code(code)
