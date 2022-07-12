@@ -1,4 +1,5 @@
 #this file sets all the urls linking to Cognito
+require 'uri'
 class CognitoUrls
     AUTHORIZE_PATH = "/oauth2/authorize"
     TOKEN_PATH = "/oauth2/token"
@@ -42,7 +43,7 @@ class CognitoUrls
         path = "%s?response_type=code&client_id=%s&redirect_uri=%s" %
           [LOGIN_PATH, app_client_id, redirect_uri]
         # URI.join(@base_oauth_uri, path).to_s
-        "https://healome-app-dev.auth.ap-south-1.amazoncognito.com/login?client_id=3ok0l1f9a8hempp5524fc4pfjv&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/"
+        "https://healome-app-dev.auth.ap-south-1.amazoncognito.com/login?client_id=3ok0l1f9a8hempp5524fc4pfjv&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/auth/sign_in"
       end
   
       def logout_uri(app_client_id, redirect_uri)
@@ -54,8 +55,8 @@ class CognitoUrls
       def signup_uri(app_client_id, redirect_uri)
         path = "%s?response_type=code&client_id=%s&redirect_uri=%s" %
           [SIGNUP_PATH, app_client_id, redirect_uri]
-        URI.join(@base_oauth_uri, path).to_s
-        "https://healome-app-dev.auth.ap-south-1.amazoncognito.com/signup?client_id=3ok0l1f9a8hempp5524fc4pfjv&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/"
+        # URI.join(@base_oauth_uri, path).to_s
+        "https://healome-app-dev.auth.ap-south-1.amazoncognito.com/signup?client_id=3ok0l1f9a8hempp5524fc4pfjv&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/auth/sign_out"
       end
     end
   end

@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get '/sign_out', as: 'signout', to: 'cognito#sign_out'
   get '/sign_up', as: 'signup', to: 'cognito#sign_up'
 
-  get 'auth/sign_in', to: 'auth#signin'
-  get 'auth/sign_out', to: 'auth#signout'
+  get 'auth/sign_in', to: 'auth#signin', as: :auth_sign_in
+  get 'auth/sign_out', to: 'auth#signout', as: :auth_sign_out
 
   #root to: 'home#index'
 end

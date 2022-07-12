@@ -11,12 +11,13 @@ class ApplicationController < ActionController::Base
     cognito_session = nil
     if session[:cognito_id]
       begin
-        @cognito_session = Cognito.find(session[:cognito_id])
+        cognito_session = Cognito.find(session[:cognito_id])
       rescue ActiveRecord::RecordNotFound
       end
     end
 
     unless cognito_session
+        Rails.logger.info("no cognito session")
       return
     end
 

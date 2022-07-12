@@ -4,11 +4,12 @@ class AuthController < ApplicationController
         render :nothing => true, :status => :bad_request
         return
       end
-  
+      
+      #this part need debug
       resp = lookup_auth_code(params[:code])
       
       unless resp
-        redirect_to '/'
+        redirect_to '/', notice: "IDK"
         # redirect_to home_path, notice: "IDK"
         return
       end
@@ -34,7 +35,7 @@ class AuthController < ApplicationController
       end
   
       # Alternatively, you could redirect to a saved URL
-      redirect_to '/'
+      redirect_to '/', notice: "damn"
     #   redirect_to home_path, notice: "Logged in!"
     end
   
@@ -45,7 +46,7 @@ class AuthController < ApplicationController
         session.delete(:cognito_id)
       end
   
-      redirect_to '/'
+      redirect_to '/', notice: "Logged out!"
     #   redirect_to home_path, notice: "Logged out!"
     end
   
