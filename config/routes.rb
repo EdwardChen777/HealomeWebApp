@@ -22,5 +22,7 @@ Rails.application.routes.draw do
   get 'auth/sign_in', to: 'auth#signin', as: :auth_sign_in
   get 'auth/sign_out', to: 'auth#signout', as: :auth_sign_out
 
+  resources :users
+
   #root to: 'home#index'
 end

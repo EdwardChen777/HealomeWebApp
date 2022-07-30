@@ -13,6 +13,12 @@ gem 'uri'
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.1.2"
 
+gem 'cancancan', '3.1.0'   # '3.1.0'
+gem 'validates_timeliness', '5.0.0'
+gem 'time_date_helpers', '0.0.4'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.7'
 # Use sqlite3 as the database for Active Record

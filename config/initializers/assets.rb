@@ -33,6 +33,17 @@ Rails.application.config.assets.precompile += %w( theme.css )
 Rails.application.config.assets.precompile += %w( faq/theme.js )
 Rails.application.config.assets.precompile += %w( faq/bootstrap.min.js )
 
+#for dashboard
+Rails.application.config.assets.precompile += %w( demo/chart-area-demo.js )
+Rails.application.config.assets.precompile += %w( demo/chart-bar-demo.js )
+Rails.application.config.assets.precompile += %w( demo/chart-pie-demo.js )
+Rails.application.config.assets.precompile += %w( demo/datatables-demo.js )
+Rails.application.config.assets.precompile += %w( demo/jquery.min.js )
+Rails.application.config.assets.precompile += %w( demo/bootstrap.bundle.min.js )
+Rails.application.config.assets.precompile += %w( demo/jquery.easing.min.js )
+Rails.application.config.assets.precompile += %w( demo/sb-admin-2.min.js )
+Rails.application.config.assets.precompile += %w( demo/Chart.min.js )
+
 Rails.application.config.assets.precompile += %w( all/jquery.min.js )
 Rails.application.config.assets.precompile += %w( all/modernizr-2.8.3.min.js )
 Rails.application.config.assets.precompile += %w( all/bootstrap.min.js )

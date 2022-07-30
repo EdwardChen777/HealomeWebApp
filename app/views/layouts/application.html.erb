@@ -85,19 +85,19 @@
                                   <%# <a href="./blog.html">Blog</a> %>
                                   <a href="<%= blog_path %>">Blog</a>
                                     <ul class="sub-menu">
-                                        <li><a href="https://reactheme.com/products/html/saasi/blog.html">Blog</a></li>
+                                        <li><a href="https://google.com">Blog</a></li>
                                         <li><a href="https://reactheme.com/products/html/saasi/blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li>
                                 <%# <li> <a href="./contact.html">Contact</a></li> %>
                                 <% if (@is_signed_in) %>
                                     <li class="has-sub"><span class="arrow "></span> 
-                                        <a href="<%= about_path %>">
+                                        <a href="<%= users_path %>">
                                             <%= fa_icon "user", base: "thin", class: "pi-arrow-btn" %>
                                         </a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="https://reactheme.com/products/html/saasi/blog-single.html">Profile</a></li>
+                                                <a href="<%= users_path %>">Profile</a></li>
                                             <li>
                                                 <a href="<%= dashboard_path %>">Dashboard</a>
                                             </li>
