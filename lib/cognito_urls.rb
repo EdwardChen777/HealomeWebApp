@@ -49,7 +49,8 @@ class CognitoUrls
       def logout_uri(app_client_id, redirect_uri)
         path = "%s?response_type=code&client_id=%s&logout_uri=%s" %
           [LOGOUT_PATH, app_client_id, redirect_uri]
-        URI.join(@base_oauth_uri, path).to_s
+        # URI.join(@base_oauth_uri, path).to_s
+        "https://healome-app-dev.auth.ap-south-1.amazoncognito.com/logout?response_type=code&client_id=3ok0l1f9a8hempp5524fc4pfjv&logout_uri=http://localhost:3000/auth/sign_out"
       end
   
       def signup_uri(app_client_id, redirect_uri)

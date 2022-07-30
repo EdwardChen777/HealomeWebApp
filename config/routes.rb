@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get 'home', to: 'home#index', as: :home
   get 'home/about', to: 'home#about', as: :about
   get 'home/contact', to: 'home#contact', as: :contact
+  get 'home/temp', to: 'home#temp', as: :temp
+  get 'home/company', to: 'home#company', as: :company
+  get 'home/how_it_works', to: 'home#how_it_works', as: :how_it_works
+  get 'home/portfolio', to: 'home#portfolio', as: :portfolio
+  get 'home/blog', to: 'home#blog', as: :blog
+  get 'home/dashboard', to: 'home#dashboard', as: :dashboard
 
   #post 'auth/sign_in', to: 'auth#sign_in', as: :login
   #post 'auth/sign_out', to: 'auth#sign_out', as: :logout

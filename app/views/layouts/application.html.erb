@@ -1,33 +1,265 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>HealomeWebApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<!-- saved from url=(0042)https://reactheme.com/products/html/saasi/ -->
+<html lang="zxx" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- meta tag -->
+        
+        <title>Home | Vsaasi - Creative HTML5 Template for Saas, Startup &amp; Agency</title>
+         <meta name="description" content="">
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="https://reactheme.com/products/html/saasi/apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/home/fav.png">   
+        <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">    
+        <!-- bootstrap v4 css -->
+        <%# <%= stylesheet_link_tag  "application","bootstrap.min", "font-awesome.min", "all", "jk-menus", "animate", "owl.carousel", "slick", "flaticon", "magnific-popup", "pi-animations", "aos", "style", "pi-spacing", "responsive", "theme", media: 'all' %> 
+        <%= stylesheet_link_tag "application", media: 'all'%>
+        
+        
+    </head>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"> 
+        
+        <!-- Preloader Start Here-->        
+        <div id="pi__preloader" style="display: none;">
+            <div id="pi__circle_loader"></div>
+            <div class="pi__loader_logo">
+                <%# <img src="../../assets/images/home/fav.png" alt=""> %>
+                <%= image_tag "home/fav.png" %>
+            </div>
+        </div>        
+        <!-- Preloader End Here-->
 
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+        <!-- Header Start Here -->
+        <header id="pi-header" class="pi-header">
+            <div class="container">
+                <!-- Jk Menu -->
+                <div class="pi-main-menu">
+                    <nav>
+                        <!-- Menu Toggle btn-->
+                        <div class="menu-toggle">
+                            <div class="logo"><a href="https://reactheme.com/products/html/saasi/index.html">
+                                <%# <img src="../../assets/images/logo/logo.svg" alt="" title=""> %>
+                                <%= image_tag "logo/logo.svg" %>
+                            </a></div>
+                            <a href="https://reactheme.com/products/html/saasi/contact.html" class="pi-join-btn pi-mobile-btn">Join Us</a>
+                            <button type="button" id="menu-btn">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Menu Structure--> 
+                        <div class="jk-inner-menus">                           
+                            <ul id="jkmenu" class="jk-menus pi-sub-shadow">
+                                <li class="has-sub"><span class="arrow "></span> 
+                                  <a href="<%= home_path %>">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/index.html">Home One</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/index-two.html">Home Two</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/index-three.html">Home Three</a></li>
+                                    </ul>
+                                </li>                                
+                                <li class="has-sub"><span class="arrow "></span> 
+                                  <a href="<%= company_path %>">Company</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/404.html">404 Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub"><span class="arrow "></span> 
+                                  <a href="<%= how_it_works_path %>">How it Works</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/services.html">Service</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/services-details.html">Service Single</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub"><span class="arrow "></span> 
+                                  <%# <a href="./portfolio.html">Portfolio</a> %>
+                                  <a href="<%= portfolio_path %>">Portfolio</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/portfolio.html">Portfolio</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/portfolio-details.html">Portfolio Single</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub"><span class="arrow "></span> 
+                                  <%# <a href="./blog.html">Blog</a> %>
+                                  <a href="<%= blog_path %>">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/blog.html">Blog</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/blog-single.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <%# <li> <a href="./contact.html">Contact</a></li> %>
+                                <% if (@is_signed_in) %>
+                                    <li class="has-sub"><span class="arrow "></span> 
+                                        <a href="<%= about_path %>">
+                                            <%= fa_icon "user", base: "thin", class: "pi-arrow-btn" %>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="https://reactheme.com/products/html/saasi/blog-single.html">Profile</a></li>
+                                            <li>
+                                                <a href="<%= dashboard_path %>">Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <% end %>
+                            </ul>
+                            <%# <a href="./contact.html" class="pi-join-btn pi-desktop">Log In</a> %>
+                            <% if (!@is_signed_in) %>
+                              <a href="<%= signin_path %>" class="pi-join-btn pi-desktop">Sign In</a>
+                            <% else %>
+                              <a href="<%= signout_path %>" class="pi-join-btn pi-desktop">Sign Out</a>
+                            <% end %>
+                        </div>
+                    </nav>
+                </div>
+                <!-- End JK Menu -->
+            </div>
+        </header>
+        <!-- Header End Here -->
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-
-  <body>
-    <div class="container">
-      <header>
-        <a href="#" class="logo">HealomeWebApp</a>
-      </header>
-        <% if (!@is_signed_in) %>
-          <a href="<%= signin_path %>" class="button">Sign In</a>
-          <a href="<%= signup_path %>" class="button">Sign Up</a>
-        <% else %>
-          <a href="<%= signout_path %>" class="button">Sign Out</a>
-        <% end %>
-      <div class="container">
         <%= yield %>
-      </div>
-      <%= render :partial => "partials/flash" %>
-    </div>
-  </body>
-</html>
+
+        <!-- Footer Start Here -->
+        <div class="footer-sticky">
+            <footer id="pi-footer" class="pi-footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="pi-row">
+                            <div class="pi-footer-col pi-footer-widget-one">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <%# <img src="../../assets/images/logo/logo.svg" alt="Footer Logo"> %>
+                                        <%= image_tag "logo/logo.svg" %>
+                                    </div>
+                                    <div class="pi-footer-desc">
+                                        <p>Nice one a load of old tosh a blinding shot smashing bum</p>
+                                    </div>
+                                    <ul class="social-links">
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                              <%# <i class="fab fa-facebook-f"></i> %>
+                                              <%# <i class="fa-brands fa-facebook"></i> %>
+                                              
+                                              <%# <i class="fa-brands fa-font-awesome"></i> %>
+                                              <%= fa_icon "facebook-f", base: "brands", class: "pi-arrow-btn" %>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <i class="fab fa-twitter"></i> %>
+                                            <%= fa_icon "twitter", base: "brands", class: "pi-arrow-btn" %>
+                                        </a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <i class="fab fa-vimeo-v"></i> %>
+                                            <%= fa_icon "instagram", base: "brands", class: "pi-arrow-btn" %>
+                                        </a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <i class="fab fa-youtube"></i> %>
+                                            <%= fa_icon "youtube", base: "fab", class: "pi-arrow-btn" %>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pi-footer-col pi-footer-widget-two">
+                                <div class="footer-widget">
+                                    <h3 class="footer-title">Explore</h3>
+                                    <ul class="pi-footer-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Home</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">About Us</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Service</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Feedback</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Blog</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pi-footer-col pi-footer-widget-three">
+                                <div class="footer-widget">
+                                    <h3 class="footer-title">Resources</h3>
+                                    <ul class="pi-footer-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Build Your Team</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Campaigns</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Getting Started</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Management</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Pricing</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Press</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pi-footer-col pi-footer-widget-four">
+                                <div class="footer-widget">
+                                    <h3 class="footer-title">Products</h3>
+                                    <ul class="pi-footer-menu">
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Startup</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Vsaasi</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Application</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Company</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Developers</a></li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">Agency</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pi-copyright">
+                    <div class="container">
+                        <p>@ 2022 All Copyright Reserved. Design by <a href="https://reactheme.com/products/html/saasi/#">ReacThemes</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Footer End Here-->
+        
+        <!-- Scroll to Top Start -->
+        <div id="piscrollUp">
+            <i class="fa flaticon-back-1"></i>
+        </div> 
+        <!-- Scroll to Top End -->
+
+        <!-- jquery latest version -->
+        <%# <script src="../../assets/js/all/jquery.min.js"></script> %>
+        <%= javascript_include_tag 'all/jquery.min', 'data-turbolinks-track': 'reload' %>
+        <!-- modernizr js -->
+        <%# <script src="../../assets/js/all/modernizr-2.8.3.min.js"></script> %>
+        <%= javascript_include_tag 'all/modernizr-2.8.3.min', 'data-turbolinks-track': 'reload' %>
+        <!-- bootstrap js -->
+        <%# <script src="../../assets/js/all/bootstrap.min.js"></script> %>
+        <%= javascript_include_tag 'all/bootstrap.min', 'data-turbolinks-track': 'reload' %>
+        <!-- owl.carousel js -->
+        <%# <script src="../../assets/js/all/owl.carousel.min.js"></script> %>
+        <%= javascript_include_tag 'all/owl.carousel.min', 'data-turbolinks-track': 'reload' %>
+        <!-- slick.min js -->
+        <%# <script src="../../assets/js/all/slick.min.js"></script> %>
+        <%= javascript_include_tag 'all/slick.min', 'data-turbolinks-track': 'reload' %>
+        <!-- paroller js -->
+        <%# <script src="../../assets/js/all/jquery.paroller.js"></script> %>
+        <%= javascript_include_tag 'all/jquery.paroller', 'data-turbolinks-track': 'reload' %>
+        <!-- magnific popup -->
+        <%# <script src="../../assets/js/all/jquery.magnific-popup.min.js"></script> %>
+        <%= javascript_include_tag 'all/jquery.magnific-popup.min', 'data-turbolinks-track': 'reload' %>
+        <!-- AOS js -->
+        <%# <script src="../../assets/js/all/aos.js"></script> %>
+        <%= javascript_include_tag 'all/aos', 'data-turbolinks-track': 'reload' %>
+        <!-- wow js -->   
+        <%# <script src="../../assets/js/all/wow.min.js"></script> %>
+        <%= javascript_include_tag 'all/wow.min', 'data-turbolinks-track': 'reload' %>       
+        <!-- parallax js -->
+        <%# <script src="../../assets/js/all/parallax.min.js"></script>   %>
+        <%= javascript_include_tag 'all/parallax.min', 'data-turbolinks-track': 'reload' %>       
+        <!-- jk menus js -->
+        <%# <script src="../../assets/js/all/jk-menus.js"></script> %>
+        <%= javascript_include_tag 'all/jk-menus', 'data-turbolinks-track': 'reload' %>
+        <!-- plugins js -->   
+        <%# <script src="../../assets/js/all/plugins.js"></script>    %>
+        <%= javascript_include_tag 'all/plugins', 'data-turbolinks-track': 'reload' %>   
+		<!-- main js -->
+        <%# <script src="../../assets/js/all/main.js"></script> %>
+        <%= javascript_include_tag 'all/main', 'data-turbolinks-track': 'reload' %>
+
+        <!-- for faq -->
+        <%= javascript_include_tag 'faq/theme', 'data-turbolinks-track': 'reload' %>
+
+        <%= javascript_include_tag 'faq/bootstrap.min', 'data-turbolinks-track': 'reload' %>
+    
+</body></html>

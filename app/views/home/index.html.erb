@@ -1,9 +1,632 @@
-<% if (!@is_signed_in) %>
-<h2>Please sign in.</h2>
-<% else %>
-<%= @cognito_session.user.id %>
-<%= render 'user' %>
-<% end %>
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://reactheme.com/products/html/saasi/ -->
+<html lang="zxx" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
+    <head>
+        
+    </head>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"> 
+
+        <!-- pi wrapper Start Here -->
+        <div class="pi-wrapper">
+            <div class="pi-wrapper-inner">
+                <!-- Start Banner here -->
+                <div class="pi-banner">
+                    <div class="pi__layer1">
+                        <!-- Layer 1 here -->
+                        <%# <img class="pi-absolute" src="../../assets/images/home/layer1.png" alt="">   %>
+                        <%= image_tag "home/layer1.png", class:"pi-absolute" %> 
+                    </div>    
+                                    
+                    <div class="container">
+                        <div class = "pi-top">
+                          <% if (@is_signed_in) %>
+                            <h1 class="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: fadeInUp;">Welcome, User <%=  @current_user.email %> </h1>
+                          <% end %>
+                        </div>
+                        <div class="pi-row">
+                            <div class="pi-left-content">
+                                <span class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: fadeInUp;">Software Release 3.2.0</span>
+                                <h1 class="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: fadeInUp;">The quickest &amp; easiest online.</h1>
+                                <p class="wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: fadeInUp;">Enable everyone to optimize their health and accelerate the large-scale community-based biomarker discovery research.</p>
+                                <a class="pi-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s" href="https://reactheme.com/products/html/saasi/contact.html" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeInUp;">Get Started Now</a>
+                            </div>                
+                            <div class="pi-right-image">
+                                <!-- Layer 2 here -->
+                                <div class="pi__layer2">                                    
+                                    <%# <img class="pi-absolute pi__layer2" src="../../assets/images/home/layer2.png" alt=""> %>
+                                    <%= image_tag "home/layer2.png", class: "pi-absolute pi__layer2" %>
+                                </div> 
+
+                                <!-- Banner image here -->                       
+                                <%# <img class="pi-absolute banner-layer" src="../../assets/images/home/banner.png" alt=""> %>
+                                <%= image_tag "home/banner.png", class: "pi-absolute banner-layer"%>
+                                <!-- Layer 3 here -->
+                                <div class="pi__layer3">                                    
+                                    <%# <img class="pi-absolute pi__layer3" src="../../assets/images/home/layer44.png" alt=""> %>
+                                    <%= image_tag "home/layer44.png", class: "pi-absolute pi__layer3" %>
+                                </div>
+                            </div> 
+                        </div>               
+                    </div>
+                </div>
+                <!-- End Banner here -->
+
+                <!-- Start Service here -->
+                <div class="pi-service">
+                    <div class="container">
+                        <div class="pi-container">
+                            <div class="pi-sec-title">
+                                <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;"><%= image_tag "home/title.png" %></i>
+                                <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Key features of vsaasi</h2>
+                                <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself.!</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="pi-inner-col">
+                                        <i class="pi-icon wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                            <%= image_tag "home/1.png" %>
+                                        </i>
+                                        <h3 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Breaking the rules</h3>
+                                        <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The little rotter Harry well so I said he nicked .!</p>
+                                        <a href="https://reactheme.com/products/html/saasi/#" class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                            <%# <i class="pi-arrow-btn flaticon-right-arrow"></i> %>
+                                            <%# <i class="fa fa-home" aria-hidden="true"></i> %>
+                                            <%= fa_icon "arrow-right", base: "solid", class: "pi-arrow-btn" %>
+                                            <%# <%= icon('fa-brands', 'font-awesome') %>
+                                            </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="pi-inner-col">
+                                        <i class="pi-icon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: none;">
+                                            <%= image_tag "home/2.png" %>
+                                        </i>
+                                        <h3 class="pi-title wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: none;">Project management</h3>
+                                        <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The little rotter Harry well so I said he nicked .!</p>
+                                        <a href="https://reactheme.com/products/html/saasi/#" class="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: none;">
+                                            <%# <i class="pi-arrow-btn flaticon-right-arrow"></i> %>
+                                            <%= fa_icon "arrow-right", base: "solid", class: "pi-arrow-btn" %>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="pi-inner-col">
+                                        <i class="pi-icon wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
+                                            <%= image_tag "home/3.png" %>
+                                        </i>
+                                        <h3 class="pi-title wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">Beautiful mobile app</h3>
+                                        <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The little rotter Harry well so I said he nicked .!</p>
+                                        <a href="https://reactheme.com/products/html/saasi/#" class="wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
+                                            <%# <i class="pi-arrow-btn flaticon-right-arrow"></i> %>
+                                            <%= fa_icon "arrow-right", base: "solid", class: "pi-arrow-btn" %>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <img class="pi-absolute" src="../../assets/images/home/pattern.png" alt="">  
+                            <%= image_tag "home/pattern.png" %>            
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service here -->
+
+                <!-- Start About here -->
+                <div class="pi-about">
+                    <div class="container">
+                        <div class="pi-container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <%# <img class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" src="../../assets/images/home/1(1).png" alt="" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">     %>
+                                    <%= image_tag "home/1(1).png", class: "wow fadeInUp" %>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="pi-sec-title">
+                                        <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                        <%# <img src="../../assets/images/home/2(1).png" alt=""> %>
+                                        <%= image_tag "home/2(1).png"%>
+                                        </i>
+                                        <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">UX research documents, all in one place</h2>
+                                        <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself through your fiverr reputation.</p>
+                                        <ul class="pi-list">
+                                            <li class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Strategy &amp; Planning</li>
+                                            <li class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Vsaas Design</li>
+                                        </ul>
+                                        <a href="https://reactheme.com/products/html/saasi/contact.html" class="pi-btn wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Get started</a>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End About here -->
+
+                <!-- Start Tab here -->               
+                <div class="pi-tab">
+                    <div class="container">
+                        <div class="pi-sec-title">
+                            <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                            <%# <img src="../../assets/images/home/icon.png" alt=""> %>
+                            <%= image_tag "home/icon.png" %>
+                            </i>
+                            <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Meet our UX design tools</h2>
+                            <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself.!</p>                            
+                        </div>
+                        <div class="pi-tab-gird">                            
+                            <div class="pi-col-1 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                <div class="menu">
+                                   <div class="active"><span class="light">Vsaasi</span><em> Fully Responsive </em></div>
+                                   <div><span class="light">Docs</span> <em>Connect with customers </em></div>
+                                   <div><span class="light">Saas</span> <em>Make impressive docs </em></div>
+                                </div>
+                            </div>
+                            <div class="pi-col-2 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                <ul class="pi-tab-content">
+                                    <li class="active">
+                                        <div>
+                                            <%# <img src="../../assets/images/home/1.jpg" alt=""> %>
+                                            <%= image_tag "home/1.jpg" %>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><div>
+                                            <%# <img src="../../assets/images/home/2.jpg" alt=""> %>
+                                            <%= image_tag "home/2.jpg" %>
+                                        </div></div>
+                                    </li>
+                                    <li><div>
+                                            <%# <img src="../../assets/images/home/3.1.jpg" alt=""> %>
+                                            <%= image_tag "home/3.1.jpg" %>
+                                        </div>
+                                    </li>
+                                </ul>                                
+                            </div>
+                            <div class="pi__shape_bg5" data-paroller-factor="-0.2" style="background: url(&quot;assets/images/tab/3.png&quot;) center 0px no-repeat;">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!-- End Tab here --> 
+                
+                <!-- FAQ starts here -->
+                 <div class="py-8" id="testimonial">
+                    <div class="container">
+                    <div class="bg-holder z-index-1" style="background-image:url(assets/img/illustrations/dot.png);background-position:right top;background-size:auto;margin-left:-30px;margin-top:10px;filter:contrast(1.5);">
+                    </div>
+                
+                    <div class="bg-holder z-index-1" style="background-image:url(assets/img/illustrations/dot-2.png);background-position:left bottom;background-size:auto;margin-left:-35px;margin-top:-65px;filter:contrast(1.5);">
+                    </div>
+                
+                    <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="row h-100">
+                            <div class="col-12">
+                                <div class="card text-white bg-primary-gradient">
+                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                    <h2 class="fw-bold text-white text-center">FAQ</h2>
+                                    <hr class="mx-auto" style="height:2px;width:50px">
+                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                        <%# <img class="img-fluid me-4 me-md-3 me-lg-4" src="./Healome-one_files/biological_age.webp" width="100" alt=""> %>
+                                        <%= image_tag "home/biological_age.webp", class: "img-fluid me-4 me-md-3 me-lg-4", width: "100" %>
+                                    <div class="w-md-25 my-3">
+                                        <h5 class="mb-0 fw-medium text-white">What is Biological age?</h5>
+                                        <!-- <p class="fw-normal mb-0">Founder Circle</p> -->
+                                    </div>
+                                    <div class="w-md-75">
+                                        <p class="card-text ms-md-5" style="color:floralwhite;">Chronological age is defined by years from birth; biological age is defined by years from death. In other words, the "birthday" based chronological age says how old you are while biological age says how young you are.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="row h-100">
+                            <div class="col-12">
+                                <div class="card text-white bg-primary-gradient">
+                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                    <h2 class="fw-bold text-white text-center">FAQ</h2>
+                                    <hr class="mx-auto" style="height:2px;width:50px">
+                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                        <%# <img class="img-fluid me-4 me-md-3 me-lg-4" src="./Healome-one_files/age_calculation.jpg" width="100" alt=""> %>
+                                        <%= image_tag "home/age_calculation.jpg", class: "img-fluid me-4 me-md-3 me-lg-4", width: "100" %>
+                                    <div class="w-md-25 my-3">
+                                        <h5 class="mb-0 fw-medium text-white">How is Biological age calculated?</h5>
+                                        <!-- <p class="fw-normal mb-0">UI/UX Designer</p> -->
+                                    </div>
+                                    <div class="w-md-75">
+                                        <p class="card-text ms-md-5" style="color:floralwhite;"> Our ML based clock is trained on large open and closed datasets to track and mesaure age progression from various biomarkers. These are then validated using kaplan meir curves and cox-hazard proportional survival models.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                            <div class="col-12">
+                                <div class="card text-white bg-primary-gradient">
+                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                    <h2 class="fw-bold text-white text-center">FAQ</h2>
+                                    <hr class="mx-auto" style="height:2px;width:50px">
+                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                        <%# <img class="img-fluid me-4 me-md-3 me-lg-4" src="./Healome-one_files/research_enagement.jpg" width="100" alt=""> %>
+                                        <%= image_tag "home/research_enagement.jpg", class: "img-fluid me-4 me-md-3 me-lg-4", width: "100" %>
+                                    <div class="w-md-25 my-3">
+                                        <h5 class="mb-0 fw-medium text-white" style="color:gray;"> How do I engage in the research?</h5>
+                                        <!-- <p class="fw-normal mb-0">Web Designer</p> -->
+                                    </div>
+                                    <div class="w-md-75">
+                                        <p class="card-text ms-md-5" style="color:floralwhite;">Download the app, get tested and start your age optimization journey. You can choose to share you anonymized data for reserach and earn $HEAL and $LIFE of Deathless DAO</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row mt-4 flex-center">
+                        <div class="col-4 col-sm-5 text-end position-relative z-index-2">
+                            <%# <a class="carousel-control-prev carousel-icon z-index-2" href="https://www.healome.one/#carouselExampleDark" role="button" data-bs-slide="prev"> %>
+                            <a class="carousel-control-prev carousel-icon z-index-2" href="http://localhost:3000/#carouselExampleDark" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                            </a>
+                        </div>
+                        <div class="col-auto position-relative z-index-2">
+                            <ol class="carousel-indicators">
+                            <li class="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" aria-current="true"></li>
+                            <%# <button type = "button" class="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" aria-current="true"></button> %>
+                            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class=""></li>
+                            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class=""></li>
+                            </ol>
+                        </div>
+                        <div class="col-4 col-sm-5 position-relative z-index-2">
+                            <%# <a class="carousel-control-next carousel-icon z-index-2" href="https://www.healome.one/#carouselExampleDark" role="button" data-bs-slide="next"> %>
+                            <a class="carousel-control-next carousel-icon z-index-2" href="http://localhost:3000/#carouselExampleDark" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- FAQ ends here -->
+
+                <!-- Start Pricing here -->
+                <div class="pi-pricing"> 
+                    <div class="pi__shape_bg4" data-paroller-factor="0.08" style="background: url(&quot;assets/images/pricing/p1.png&quot;) center 0px no-repeat;">
+                    </div>                   
+                    <div class="pricing-switcher">
+                        <div class="pi-sec-title">
+                            <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                <%# <img src="../../assets/images/home/4.png" alt=""> %>
+                                <%= image_tag "home/4.png" %>
+                            </i>
+                            <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Simlple and <br> transparent pricing</h2>
+                            <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself.!</p>                            
+                        </div>
+                        <p class="fieldset wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                            <input type="radio" name="duration-1" value="monthly" id="monthly-1">
+                            <label for="monthly-1" class="pi-mon pi-actives">Monthly</label>
+                            <input type="radio" name="duration-1" value="yearly" id="yearly-1">
+                            <label for="yearly-1" class="pi-anu">Annual</label>
+                            <span class="switch"></span>
+                        </p>
+                    </div>                    
+                    <div class="pi-price-inner">
+                        <div id="layer6" class="layer6" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+                            <div data-depth="0.10" style="transform: translate3d(-1.9px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                                <%# <img class="pi-absolute price-bg" src="../../assets/images/home/bg1.png" alt=""> %>
+                                <%= image_tag "home/bg1.png", class: "pi-absolute price-bg" %>
+                            </div>
+                        </div>
+                        <ul class="pricing-list bounce-invert wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">                        
+                            <li>
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/1(3).png" alt=""> %>
+                                                <%= image_tag "home/1(3).png" %>
+                                            </div>
+                                            <h4>Basic</h4>
+                                            <div class="price">
+                                                <span class="value">$0</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for individual content creators</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li class="dark">Content Creation</li>
+                                                <li class="dark">Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Try for Free</a>
+                                        </div>
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">                                    
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/2(3).png" alt=""> %>
+                                                <%= image_tag "home/2(3).png" %>
+                                            </div>
+                                            <h4>Basic</h4>
+                                            <div class="price">
+                                                <span class="value">$34</span>
+                                                <span class="duration">mo</span>
+                                                <p>For small businesses looking for big growth</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div>                                    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="exclusive">
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/2(3).png" alt=""> %>
+                                                <%= image_tag "home/2(3).png" %>
+                                            </div>
+                                            <h4>Business</h4>
+                                            <div class="price">
+                                                <span class="value">$34</span>
+                                                <span class="duration">mo</span>
+                                                <p>For small businesses looking for big growth</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div> 
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/3(2).png" alt=""> %>
+                                                <%= image_tag "home/3(2).png" %>
+                                            </div>
+                                            <h4>Business</h4>
+                                            <div class="price">
+                                                <span class="value">$76</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/3(2).png" alt=""> %>
+                                                <%= image_tag "home/3(2).png" %>
+                                            </div>
+                                            <h4>Enterprise</h4>
+                                            <div class="price">
+                                                <span class="value">$76</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div>
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <%# <img src="../../assets/images/home/3(2).png" alt=""> %>
+                                                <%= image_tag "home/3(2).png" %>
+                                            </div>
+                                            <h4>Enterprise</h4>
+                                            <div class="price">
+                                                <span class="value">$99</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+                <!-- End Pricing here -->
+
+                <!-- Start awards here -->
+                <div class="pi-awards">
+                    <div class="container">
+                        <div class="pi-container">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="pi-sec-title">
+                                        <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                            <%# <img src="../../assets/images/home/icon(2).png" alt=""> %>
+                                            <%= image_tag "home/icon(2).png" %>
+                                        </i>
+                                        <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The awards won <br> by our project.</h2>
+                                        <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself through your.</p>                            
+                                    </div>   
+                                </div>
+                                <div class="col-lg-7">
+                                    <ul class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo1.png" alt=""> %>
+                                            <%= image_tag "home/logo1.png" %></a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo2.png" alt=""> %>
+                                            <%= image_tag "home/logo2.png" %></a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo3.png" alt=""> %>
+                                            <%= image_tag "home/logo3.png" %></a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo4.png" alt=""> %>
+                                            <%= image_tag "home/logo4.png" %></a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo5.png" alt=""> %>
+                                            <%= image_tag "home/logo5.png" %></a>
+                                        </li>
+                                        <li><a href="https://reactheme.com/products/html/saasi/#">
+                                            <%# <img src="../../assets/images/home/logo6.png" alt=""> %>
+                                            <%= image_tag "home/logo6.png" %></a>
+                                        </li>
+                                    </ul>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End awards here -->
+
+                <!-- Start Join here -->
+                <div class="pi-join">
+                    <div class="container">
+                        <div class="pi-container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="pi-inner-col pi-box-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
+                                        <%# <img src="../../assets/images/home/1(4).png" alt=""> %>
+                                        <%= image_tag "home/1(4).png" %>
+                                        <h3>Join as Designer</h3>
+                                        <p>Why I say old chap that is spiffing   chav naff Jeffrey bugger sloshed chimney pot harry.</p> 
+                                        <a href="https://reactheme.com/products/html/saasi/#">Read More 
+                                            <%# <i class="pi-arrow-btn flaticon-right-arrow"></i> %>
+                                            <%= fa_icon "long-arrow-right", base: "long", class: "pi-arrow-btn" %>
+                                        </a>                   
+                                    </div>   
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="pi-inner-col pi-box-2 wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 2s; animation-delay: 0.5s; animation-name: none;">
+                                        <%# <img src="../../assets/images/home/2(4).png" alt=""> %>
+                                        <%= image_tag "home/2(4).png" %>
+                                        <h3>Join as Developer</h3>
+                                        <p>Why I say old chap that is spiffing   chav naff Jeffrey bugger sloshed chimney pot harry.</p> 
+                                        <a href="https://reactheme.com/products/html/saasi/#">Read More 
+                                            <%# <i class="pi-arrow-btn flaticon-right-arrow"></i> %>
+                                            <%= fa_icon "long-arrow-right", base: "thin", class: "pi-arrow-btn" %>
+                                        </a>                   
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Join here -->                
+
+                <!-- Start Design Tool here -->
+                <div class="pi-design">
+                    <div class="container">
+                        <div class="pi-container">                             
+                            <h2 class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Ready to use <br> The smartest design tool?</h2>
+                            <form class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".7s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.7s; animation-name: none;"> 
+                                <input type="text" id="email" name="email" placeholder="Enter your email">
+                                <input type="submit" value="Get Started"><br>
+                            </form>                      
+                            <div class="pi-check-box wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".9s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.9s; animation-name: none;">
+                                <input type="checkbox" id="box-1" checked="">
+                                <label for="box-1">Free 30-day trial</label>
+                                <input type="checkbox" id="box-2" checked="">
+                                <label for="box-2">Analytics</label>
+                            </div>
+                            <div id="layer5" class="layer5" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+                                <div data-depth="0.30" style="transform: translate3d(-5px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                                    <%# <img class="pi-absolute layer21" src="../../assets/images/home/1(5).png" alt=""> %>
+                                    <%= image_tag "home/1(5).png", class: "pi-absolute layer21"%>
+                                </div>
+                            </div>                            
+                            <%# <img class="pi-absolute layer22" src="../../assets/images/home/2(5).png" alt=""> %>
+                            <%= image_tag "home/2(5).png", class: "pi-absolute layer22" %>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Design Tool here -->                
+            </div>
+        </div>
+        <!-- pi wrapper End Here -->
+
+        <!-- Scroll to Top Start -->
+        <div id="piscrollUp">
+            <i class="fa flaticon-back-1"></i>
+        </div> 
+        <!-- Scroll to Top End -->
+    
+</body></html>
+
+
+<%# <% if (!@is_signed_in) %> 
+<%# <h2>Please sign in.</h2> %>
+<%# <% else %> 
+<%# <%= link_to "Template", temp_path,class: "waves-effect waves-light btn teal lighten-2", border_radius: '100px'%> 
+<%# <%= @cognito_session.user.id %> 
+<%# <%= render 'user' %> 
+<%# <% end %> 
+
+
 <!-- 
 <!DOCTYPE html>
 <html lang="en">

@@ -10,4 +10,19 @@ class HomeController < ApplicationController
   
     def privacy
     end
+    
+    def temp
+    end
+
+    def company
+    end
+
+    def how_it_works
+    end
+
+    def portfolio
+    end
+
+    def blog
+    end
 end

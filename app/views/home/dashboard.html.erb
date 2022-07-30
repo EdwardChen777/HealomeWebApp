@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://reactheme.com/products/html/saasi/ -->
+<html lang="zxx" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
+    <head>
+        
+    </head>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"> 
+
+        <section class="dashboard-area">
+        <div class="dashboard_menu_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="dashboard_menu">
+                            <li class="active">
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html">
+                                    <span class="lnr lnr-home"></span>Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-setting.html">
+                                    <span class="lnr lnr-cog"></span>Setting</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-purchase.html">
+                                    <span class="lnr lnr-cart"></span>Purchase</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-add-credit.html">
+                                    <span class="lnr lnr-dice"></span>Add Credits</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-statement.html">
+                                    <span class="lnr lnr-chart-bars"></span>Statements</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-upload.html">
+                                    <span class="lnr lnr-upload"></span>Upload Items</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-manage-item.html">
+                                    <span class="lnr lnr-briefcase"></span>Manage Items</a>
+                            </li>
+                            <li>
+                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard-withdrawal.html">
+                                    <span class="lnr lnr-briefcase"></span>Withdrawals</a>
+                            </li>
+                        </ul>
+                        <!-- end /.dashboard_menu -->
+                    </div>
+                    <!-- end /.col-md-12 -->
+                </div>
+                <!-- end /.row -->
+            </div>
+            <!-- end /.container -->
+        </div>
+        <!-- end /.dashboard_menu_area -->
+
+        <div class="dashboard_contents">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="author-info author-info--dashboard mcolorbg4">
+                            <p>Total Items</p>
+                            <h3>4,369</h3>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="author-info author-info--dashboard mcolorbg2">
+                            <p>Monthly Sales</p>
+                            <h3>$273.00</h3>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="author-info author-info--dashboard mcolorbg3">
+                            <p>Yearly Sales</p>
+                            <h3>$2,249.00</h3>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="author-info author-info--dashboard mcolorbg1">
+                            <p>Lifetime Sales</p>
+                            <h3>$5,583.00</h3>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-3 -->
+                </div>
+                <!-- end /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dashboard_module statistics_module">
+                            <div class="dashboard__title">
+                                <h4>Sales and Views Statistics</h4>
+
+                                <div class="pull-right">
+                                    <div id="stat_legend" class="legend"><ul class="piechart0-legend"><li><span style="background-color:#7347c1"></span>Daily Views</li><li><span style="background-color:#0674ec"></span>Daily Sale</li></ul></div>
+                                    <div class="select-wrap">
+                                        <select name="mon" class="period_selector">
+                                            <option value="jan">Jan</option>
+                                            <option value="feb">Feb</option>
+                                            <option value="mar">Mar</option>
+                                        </select>
+                                        <span class="lnr lnr-chevron-down"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard__content"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                <canvas id="myChart" width="2108" height="1054" style="display: block; height: 527px; width: 1054px;" class="chartjs-render-monitor"></canvas>
+
+                                <div class="statistics_data">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="single_stat_data">
+                                                <h4 class="single_stat__title">478</h4>
+                                                <p>Total
+                                                    <span>Sales</span> This Month</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-center col-sm-4">
+                                            <div class="single_stat_data">
+                                                <h4 class="single_stat__title">$2,478</h4>
+                                                <p>Total
+                                                    <span>Earnings</span> This Month</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-right col-sm-4">
+                                            <div class="single_stat_data">
+                                                <h4 class="single_stat__title">1,878</h4>
+                                                <p>Total
+                                                    <span>Views</span> This Month</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-12 -->
+
+                    <div class="col-lg-6">
+                        <div class="dashboard_module chart country_statistics">
+                            <div class="dashboard__title">
+                                <h4>Country Statistics</h4>
+                                <div class="select-wrap">
+                                    <select name="months" class="period_selector">
+                                        <option value="jan">Jan</option>
+                                        <option value="feb">Feb</option>
+                                        <option value="mar">Mar</option>
+                                    </select>
+                                    <span class="lnr lnr-chevron-down"></span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Country</th>
+                                            <th>Visitors</th>
+                                            <th>Sales</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="country_flag">
+                                                    <img src="./flam.jpg" alt="Country Flag">
+                                                </div>
+                                                <span>United States</span>
+                                            </td>
+                                            <td>546</td>
+                                            <td>$230</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="country_flag">
+                                                    <img src="./assets/img/flg2.png" alt="Country Flag">
+                                                </div>
+                                                <span>United Kingdom</span>
+                                            </td>
+                                            <td>246</td>
+                                            <td>$80</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="country_flag">
+                                                    <img src="./assets/img/flg3.png" alt="Country Flag">
+                                                </div>
+                                                <span>Canada</span>
+                                            </td>
+                                            <td>170</td>
+                                            <td>$65</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="country_flag">
+                                                    <img src="./assets/img/flg4.png" alt="Country Flag">
+                                                </div>
+                                                <span>Newzland</span>
+                                            </td>
+                                            <td>78</td>
+                                            <td>$24</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- end /.dashboard_module -->
+                    </div>
+                    <!-- end /.col-md-6 -->
+
+                    <div class="col-lg-6">
+                        <div class="dashboard_module visit_data">
+                            <div class="dashboard__content">
+                                <div class="chart_top">
+                                    <div class="v_refer">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li>
+                                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#visit_source" class="active" aria-controls="visit_source" role="tab" data-toggle="tab">Visit Source</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#referrals" aria-controls="referrals" role="tab" data-toggle="tab">Referrals</a>
+                                            </li>
+                                        </ul>
+                                        <div class="select-wrap">
+                                            <select name="month" class="period_selector">
+                                                <option value="jan">Jan</option>
+                                                <option value="feb">Feb</option>
+                                                <option value="mar">Mar</option>
+                                            </select>
+                                            <span class="lnr lnr-chevron-down"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="charts">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade show active" id="visit_source"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                <canvas id="piechart" width="960" height="480" style="display: block; height: 240px; width: 480px;" class="chartjs-render-monitor"></canvas>
+
+                                                <div id="pie-legend" class="legend"><ul class="piechart1-legend"><li><span style="background-color:#0674ec"></span>Google</li><li><span style="background-color:#ff6a6c"></span>Website</li><li><span style="background-color:#61d039"></span>Other</li></ul></div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade show referrals_data" id="referrals">
+                                                <ul>
+                                                    <li>
+                                                        <p class="site">google.com</p>
+                                                        <p class="visit">
+                                                            <span>visitors:</span>250</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <p class="site">dribbble.com</p>
+                                                        <p class="visit">
+                                                            <span>visitors:</span>450</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <p class="site">behance.com</p>
+                                                        <p class="visit">
+                                                            <span>visitors:</span>341</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <p class="site">domain.com</p>
+                                                        <p class="visit">
+                                                            <span>visitors:</span>98</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end /.dashboard_module -->
+                    </div>
+                    <!-- end /.col-md-6 -->
+
+                    <div class="col-lg-8">
+                        <div class="dashboard_module recent_sells">
+                            <div class="dashboard__title">
+                                <h4>Recent Items Sales</h4>
+
+                                <div class="loading">
+                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                        <span class="lnr lnr-sync"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <ul>
+                                    <li>
+                                        <div class="single_sell">
+                                            <div class="single_sell__thumb-title">
+                                                <div class="prod_thumbnail">
+                                                    <img src="./assets/img/prodthumb.png" alt="product thumbnail">
+                                                </div>
+                                                <div class="prod_title">
+                                                    <h4>Finance and Consulting Business Theme</h4>
+                                                    <div class="category">
+                                                        <img src="./assets/img/catword.png" alt="category">
+                                                        <span>Wordpress</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="ammount">
+                                                <p>$34.25</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="single_sell">
+                                            <div class="single_sell__thumb-title">
+                                                <div class="prod_thumbnail">
+                                                    <img src="./prodthumb2.jpg" alt="product thumbnail">
+                                                </div>
+                                                <div class="prod_title">
+                                                    <h4>Best Free Responsive ReactJS Admin Themes</h4>
+                                                    <div class="category">
+                                                        <img src="./assets/img/catword.png" alt="category">
+                                                        <span>Wordpress</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="ammount">
+                                                <p>$34.25</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="single_sell">
+                                            <div class="single_sell__thumb-title">
+                                                <div class="prod_thumbnail">
+                                                    <img src="./prodthumb3.jpg" alt="product thumbnail">
+                                                </div>
+                                                <div class="prod_title">
+                                                    <h4>Best YouTube Channels For UI/UX Designers</h4>
+                                                    <div class="category">
+                                                        <img src="./assets/img/catword.png" alt="category">
+                                                        <span>Wordpress</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="ammount">
+                                                <p>$34.25</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end /.dashboard_module -->
+                    </div>
+                    <!-- end /.col-md-8 -->
+
+
+                    <div class="col-lg-4">
+                        <div class="dashboard_module recent_buyers">
+                            <div class="dashboard__title">
+                                <h4>Recent Buyers</h4>
+                                <div class="loading">
+                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                        <span class="lnr lnr-sync"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <ul>
+                                    <li>
+                                        <div class="single_buyer">
+                                            <div class="buyer__thumb_title">
+                                                <div class="thumb">
+                                                    <img src="./buyr1.jpg" alt="Buyer Images">
+                                                </div>
+                                                <div class="title">
+                                                    <h4>James Anderson</h4>
+                                                    <p>United States</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="price">
+                                                <p>$29</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="single_buyer">
+                                            <div class="buyer__thumb_title">
+                                                <div class="thumb">
+                                                    <img src="./assets/img/buyr2.png" alt="Buyer Images">
+                                                </div>
+                                                <div class="title">
+                                                    <h4>Tarashi Hamada</h4>
+                                                    <p>Japan</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="price">
+                                                <p>$26</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="single_buyer">
+                                            <div class="buyer__thumb_title">
+                                                <div class="thumb">
+                                                    <img src="./buyr3.jpg" alt="Buyer Images">
+                                                </div>
+                                                <div class="title">
+                                                    <h4>Shah Hossain</h4>
+                                                    <p>Biplobland</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="price">
+                                                <p>$19</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-4 -->
+
+                    <div class="col-lg-6">
+                        <div class="dashboard_module recent_comment">
+                            <div class="dashboard__title">
+                                <h4>Recent Comments</h4>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <div class="thread">
+                                    <ul class="media-list thread-list">
+                                        <li class="single-thread">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                                        <img class="media-object" src="./assets/img/m1.png" alt="Commentator Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div>
+                                                        <div class="media-heading">
+                                                            <a href="https://getmissoffer.com/html/martplace/dist/author.html">
+                                                                <h4>Themexylum</h4>
+                                                            </a>
+                                                            <span>9 Hours Ago</span>
+                                                        </div>
+                                                        <span class="comment-tag buyer">Purchased</span>
+                                                        <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="reply-link">Reply</a>
+                                                    </div>
+                                                    <p>Nunc placerat mi id nisi interdum mollis. Praesent there pharetra, justo
+                                                        ut sceleris que the mattis.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- comment reply -->
+                                            <div class="media depth-2 reply-comment" style="display: none;">
+                                                <div class="media-left">
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                                        <img class="media-object" src="./assets/img/m2.png" alt="Commentator Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <form action="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="comment-reply-form">
+                                                        <textarea class="bla" name="reply-comment" placeholder="Write your comment..."></textarea>
+                                                        <button class="btn btn--md btn--round">Post Comment</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- comment reply -->
+                                        </li>
+                                        <!-- end single comment thread /.comment-->
+
+                                        <li class="single-thread">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                                        <img class="media-object" src="./assets/img/m3.png" alt="Commentator Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div>
+                                                        <div class="media-heading">
+                                                            <a href="https://getmissoffer.com/html/martplace/dist/author.html">
+                                                                <h4>Fierce Coder</h4>
+                                                            </a>
+                                                            <span>9 Hours Ago</span>
+                                                        </div>
+                                                        <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="reply-link">Reply</a>
+                                                    </div>
+                                                    <p>Nunc placerat mi id nisi interdum mollis. Praesent phare tra, justo ut
+                                                        sceleris que the mattis, leo quam.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- comment reply -->
+                                            <div class="media depth-2 reply-comment" style="display: none;">
+                                                <div class="media-left">
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">
+                                                        <img class="media-object" src="./assets/img/m2.png" alt="Commentator Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <form action="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="comment-reply-form">
+                                                        <textarea name="reply-comment" placeholder="Write your comment..."></textarea>
+                                                        <button class="btn btn--sm btn--round">Post Comment</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- comment reply -->
+                                        </li>
+                                        <!-- end single comment thread /.comment-->
+                                    </ul>
+                                    <!-- end /.media-list -->
+                                </div>
+                                <!-- end /.comments -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="dashboard_module recent_message">
+                            <div class="dashboard__title">
+                                <h4>Recent Message</h4>
+                                <div class="loading">
+                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">View All</a>
+                                </div>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <div class="messages">
+                                    <div class="message">
+                                        <div class="message__actions_avatar">
+                                            <div class="actions">
+                                                <span class="fa fa-star"></span>
+                                                <div class="custom_checkbox">
+                                                    <input type="checkbox" id="ch1">
+                                                    <label for="ch1">
+                                                        <span class="shadow_checkbox"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="avatar">
+                                                <img src="./assets/img/notification_head4.png" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- end /.actions -->
+
+                                        <div class="message_data">
+                                            <div class="name_time">
+                                                <div class="name">
+                                                    <p>NukeThemes</p>
+                                                    <span class="lnr lnr-envelope"></span>
+                                                </div>
+
+                                                <span class="time">Just now</span>
+                                                <p>Hello John Smith! Nunc placerat mi ...</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.message_data -->
+                                    </div>
+                                    <!-- end /.message -->
+
+                                    <div class="message">
+                                        <div class="message__actions_avatar">
+                                            <div class="actions">
+                                                <span class="fa fa-star-o"></span>
+                                                <div class="custom_checkbox">
+                                                    <input type="checkbox" id="ch2">
+                                                    <label for="ch2">
+                                                        <span class="shadow_checkbox"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="avatar">
+                                                <img src="./assets/img/notification_head5.png" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- end /.actions -->
+
+                                        <div class="message_data">
+                                            <div class="name_time">
+                                                <div class="name">
+                                                    <p>Crazy Coder</p>
+                                                    <span class="lnr lnr-envelope"></span>
+                                                </div>
+
+                                                <span class="time">Just now</span>
+                                                <p>Hi! Nunc placerat mi id nisi interum ...</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.message_data -->
+                                    </div>
+                                    <!-- end /.message -->
+
+                                    <div class="message_composer">
+                                        <div class="trumbowyg-box trumbowyg-editor-visible trumbowyg-en trumbowyg"><div class="trumbowyg-button-pane"><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-viewHTML-button " title="View HTML" tabindex="-1"><svg><use xlink:href="#trumbowyg-view-html"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-undo-button " title="Undo (Ctrl + Z)" tabindex="-1"><svg><use xlink:href="#trumbowyg-undo"></use></svg></button><button type="button" class="trumbowyg-redo-button " title="Redo (Ctrl + Y)" tabindex="-1"><svg><use xlink:href="#trumbowyg-redo"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-formatting-button  trumbowyg-open-dropdown" title="Formatting" tabindex="-1"><svg><use xlink:href="#trumbowyg-p"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-strong-button " title="Strong (Ctrl + B)" tabindex="-1"><svg><use xlink:href="#trumbowyg-strong"></use></svg></button><button type="button" class="trumbowyg-em-button " title="Emphasis (Ctrl + I)" tabindex="-1"><svg><use xlink:href="#trumbowyg-em"></use></svg></button><button type="button" class="trumbowyg-del-button " title="Deleted" tabindex="-1"><svg><use xlink:href="#trumbowyg-del"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-superscript-button " title="Superscript" tabindex="-1"><svg><use xlink:href="#trumbowyg-superscript"></use></svg></button><button type="button" class="trumbowyg-subscript-button " title="Subscript" tabindex="-1"><svg><use xlink:href="#trumbowyg-subscript"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-link-button  trumbowyg-open-dropdown" title="Link" tabindex="-1"><svg><use xlink:href="#trumbowyg-link"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-insertImage-button " title="Insert Image" tabindex="-1"><svg><use xlink:href="#trumbowyg-insert-image"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-justifyLeft-button " title="Align Left" tabindex="-1"><svg><use xlink:href="#trumbowyg-justify-left"></use></svg></button><button type="button" class="trumbowyg-justifyCenter-button " title="Align Center" tabindex="-1"><svg><use xlink:href="#trumbowyg-justify-center"></use></svg></button><button type="button" class="trumbowyg-justifyRight-button " title="Align Right" tabindex="-1"><svg><use xlink:href="#trumbowyg-justify-right"></use></svg></button><button type="button" class="trumbowyg-justifyFull-button " title="Align Justify" tabindex="-1"><svg><use xlink:href="#trumbowyg-justify-full"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-unorderedList-button " title="Unordered list" tabindex="-1"><svg><use xlink:href="#trumbowyg-unordered-list"></use></svg></button><button type="button" class="trumbowyg-orderedList-button " title="Ordered list" tabindex="-1"><svg><use xlink:href="#trumbowyg-ordered-list"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-horizontalRule-button " title="Insert horizontal rule" tabindex="-1"><svg><use xlink:href="#trumbowyg-horizontal-rule"></use></svg></button></div><div class="trumbowyg-button-group "><button type="button" class="trumbowyg-removeformat-button " title="Remove format" tabindex="-1"><svg><use xlink:href="#trumbowyg-removeformat"></use></svg></button></div><div class="trumbowyg-button-group trumbowyg-right"><button type="button" class="trumbowyg-fullscreen-button trumbowyg-not-disable" title="Fullscreen" tabindex="-1"><svg><use xlink:href="#trumbowyg-fullscreen"></use></svg></button></div></div><textarea name="trumbowyg-demo" class="trumbowyg-textarea" tabindex="-1" style="height: 140px;"></textarea><div class="composer_field trumbowyg-editor" id="trumbowyg-demo" contenteditable="true" dir="ltr" style="height: 140px;"></div><div class="trumbowyg-dropdown-formatting trumbowyg-dropdown trumbowyg-fixed-top" data-dropdown="formatting" style="display: none;"><button type="button" class="trumbowyg-p-dropdown-button"><svg><use xlink:href="#trumbowyg-p"></use></svg>Paragraph</button><button type="button" class="trumbowyg-blockquote-dropdown-button"><svg><use xlink:href="#trumbowyg-blockquote"></use></svg>Quote</button><button type="button" class="trumbowyg-h1-dropdown-button"><svg><use xlink:href="#trumbowyg-h1"></use></svg>Header 1</button><button type="button" class="trumbowyg-h2-dropdown-button"><svg><use xlink:href="#trumbowyg-h2"></use></svg>Header 2</button><button type="button" class="trumbowyg-h3-dropdown-button"><svg><use xlink:href="#trumbowyg-h3"></use></svg>Header 3</button><button type="button" class="trumbowyg-h4-dropdown-button"><svg><use xlink:href="#trumbowyg-h4"></use></svg>Header 4</button></div><div class="trumbowyg-dropdown-link trumbowyg-dropdown trumbowyg-fixed-top" data-dropdown="link" style="display: none;"><button type="button" class="trumbowyg-createLink-dropdown-button" title=" (Ctrl + K)"><svg><use xlink:href="#trumbowyg-create-link"></use></svg>Insert link</button><button type="button" class="trumbowyg-unlink-dropdown-button"><svg><use xlink:href="#trumbowyg-unlink"></use></svg>Remove link</button></div><div class="trumbowyg-overlay" style="top: 73px; height: 141px;"></div></div>
+                                        <!-- end /.trumbowyg-demo -->
+
+                                        <div class="attached"></div>
+
+                                        <div class="btns">
+                                            <button class="btn send btn--sm btn--round">Reply</button>
+                                            <label for="att">
+                                                <input type="file" class="attachment_field" id="att" multiple="">
+                                                <span class="lnr lnr-paperclip"></span>Attachment</label>
+                                        </div>
+                                        <!-- end /.message_composer -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end /.col-md-6 -->
+
+                    <div class="col-lg-8">
+                        <div class="dashboard_module recent_notification">
+                            <div class="dashboard__title">
+                                <h4>Recent Notification</h4>
+                                <div class="loading">
+                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">View All</a>
+                                </div>
+                            </div>
+                            <div class="dashboard__content">
+                                <div class="notifications_module">
+                                    <div class="notification">
+                                        <span class="line"></span>
+                                        <div class="notification__info">
+                                            <div class="info_avatar">
+                                                <img src="./assets/img/notification_head.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <span>Anderson</span> added to Favourite
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">Mccarther Coffee Shop</a>
+                                                </p>
+                                                <p class="time">Just now</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.notifications -->
+
+                                        <div class="notification__icons ">
+                                            <span class="lnr lnr-heart loved noti_icon"></span>
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                        <!-- end /.notifications -->
+                                    </div>
+                                    <!-- end /.notifications -->
+
+                                    <div class="notification">
+                                        <div class="notification__info">
+                                            <div class="info_avatar">
+                                                <img src="./assets/img/notification_head2.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <span>Michael Jorden</span> commented on
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">MartPlace Extension Bundle</a>
+                                                </p>
+                                                <p class="time">Just now</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.notifications -->
+
+                                        <div class="notification__icons ">
+                                            <span class="lnr lnr-bubble commented noti_icon"></span>
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                        <!-- end /.notifications -->
+                                    </div>
+                                    <!-- end /.notifications -->
+
+                                    <div class="notification">
+                                        <div class="notification__info">
+                                            <div class="info_avatar">
+                                                <img src="./assets/img/notification_head3.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <span>Khamoka </span>purchased
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#"> Visibility Manager Subscriptions</a>
+                                                </p>
+                                                <p class="time">Just now</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.notifications -->
+
+                                        <div class="notification__icons ">
+                                            <span class="lnr lnr-cart purchased noti_icon"></span>
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                        <!-- end /.notifications -->
+                                    </div>
+                                    <!-- end /.notifications -->
+
+                                    <div class="notification">
+                                        <div class="notification__info">
+                                            <div class="info_avatar">
+                                                <img src="./assets/img/notification_head4.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <span>Anderson</span> added to Favourite
+                                                    <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#">Mccarther Coffee Shop</a>
+                                                </p>
+                                                <p class="time">Just now</p>
+                                            </div>
+                                        </div>
+                                        <!-- end /.notifications -->
+
+                                        <div class="notification__icons ">
+                                            <span class="lnr lnr-star reviewed noti_icon"></span>
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                        <!-- end /.notifications -->
+                                    </div>
+                                    <!-- end /.notifications -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="dashboard_module product_que">
+                            <div class="dashboard__title">
+                                <h4>Product Upload Queue</h4>
+                            </div>
+
+                            <div class="dashboard__content">
+                                <ul>
+                                    <li>
+                                        <div class="uploaded_product">
+                                            <h4>Job Portal HTML Template</h4>
+                                            <p>8 days ago</p>
+                                        </div>
+
+                                        <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="cross" data-toggle="modal" data-target="#myModal">
+                                            <span class="lnr lnr-cross"></span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="uploaded_product">
+                                            <h4>Classic WordPress Blog Theme</h4>
+                                            <p>12 days ago</p>
+                                        </div>
+
+                                        <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="cross" data-toggle="modal" data-target="#myModal">
+                                            <span class="lnr lnr-cross"></span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="uploaded_product">
+                                            <h4>Biplob Vai is Boss Public</h4>
+                                            <p>8 days ago</p>
+                                        </div>
+
+                                        <a href="https://getmissoffer.com/html/martplace/dist/dashboard.html#" class="cross" data-toggle="modal" data-target="#myModal">
+                                            <span class="lnr lnr-cross"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="dashboard_module single_item_visitor">
+                            <div class="dashboard__title">
+                                <h4>Single Items Visitors</h4>
+                                <div class="pull-right">
+                                    <div class="select-wrap">
+                                        <select name="months" class="period_selector">
+                                            <option value="jan">Jan</option>
+                                            <option value="feb">Feb</option>
+                                            <option value="mar">Mar</option>
+                                        </select>
+                                        <span class="lnr lnr-chevron-down"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard__content"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                <canvas id="single_item_visit" width="2108" height="1054" style="display: block; height: 527px; width: 1054px;" class="chartjs-render-monitor"></canvas>
+
+                                <div class="item_info">
+                                    <div class="select-wrap">
+                                        <select name="item" class="period_selector">
+                                            <option value="mattheme">Material Admin - Responsive Admin Theme</option>
+                                            <option value="reactAdmin">Best Free Responsive ReactJS Admin Themes</option>
+                                            <option value="design">Best YouTube Channels For UI/UX Designers</option>
+                                        </select>
+                                        <span class="lnr lnr-chevron-down"></span>
+                                    </div>
+
+                                    <div class="info">
+                                        <h4 class="indicate">+60%</h4>
+                                        <p>Compared to Last Month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="dashboard_module single_item_visitor">
+                            <div class="dashboard__title">
+                                <h4>Total Revenue</h4>
+                                <div id="visit_legend" class="legend"><ul class="piechart3-legend"><li><span style="background-color:#7347c1"></span>2015</li><li><span style="background-color:#0674ec"></span>2016</li><li><span style="background-color:#62d03a"></span>2019</li></ul></div>
+                            </div>
+                            <div class="dashboard__content"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                <canvas id="revenue" width="2108" height="1054" style="display: block; height: 527px; width: 1054px;" class="chartjs-render-monitor"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end /.row -->
+            </div>
+            <!-- end /.container -->
+        </div>
+        <!-- end /.dashboard_menu_area -->
+    </section>
+    <!--================================
+            END DASHBOARD AREA
+    =================================-->
+
+        <!-- Scroll to Top Start -->
+        <div id="piscrollUp">
+            <i class="fa flaticon-back-1"></i>
+        </div> 
+        <!-- Scroll to Top End -->
+    
+</body></html>

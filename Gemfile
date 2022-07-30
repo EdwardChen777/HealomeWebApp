@@ -10,6 +10,8 @@ gem 'aws-sdk-cognitoidentity'
 gem 'aws-sdk-cognitoidentityprovider'
 gem 'figaro'
 gem 'uri'
+gem "font-awesome-rails"
+gem "font-awesome-sass", "~> 6.1.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.7'
