@@ -12,12 +12,12 @@ class UsersController < ApplicationController
     end
 
     def edit
-        @user.role = "customer" if current_user.role?(:customer)
+        # @user.role = "customer" if current_user.role?(:customer)
     end
 
     def update
         if @user.update_attributes(user_params)
-        flash[:notice] = "Successfully updated #{@user.username}."
+        flash[:notice] = "Successfully updated #{@user.email}."
         redirect_to users_url
         else
         render action: 'edit'
@@ -41,6 +41,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :active, :username, :role, :password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :phone, :role, :active)
     end
 end

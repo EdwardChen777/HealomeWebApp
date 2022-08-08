@@ -35,7 +35,7 @@ class AuthController < ApplicationController
       end
   
       # Alternatively, you could redirect to a saved URL
-      redirect_to '/', notice: "damn"
+      redirect_to home_path, notice: "damn"
     #   redirect_to home_path, notice: "Logged in!"
     end
   

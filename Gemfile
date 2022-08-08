@@ -12,12 +12,21 @@ gem 'figaro'
 gem 'uri'
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.1.2"
+gem "chartkick"
+gem "groupdate"
+gem 'stripe'
 
 gem 'cancancan', '3.1.0'   # '3.1.0'
 gem 'validates_timeliness', '5.0.0'
 gem 'time_date_helpers', '0.0.4'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+
+#for views
+gem 'will_paginate'
+gem 'simple_form', '5.1.0'
+gem 'materialize-form', git: 'https://github.com/cmu-is-projects/materialize-form.git'
+gem 'best_in_place', '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.7'

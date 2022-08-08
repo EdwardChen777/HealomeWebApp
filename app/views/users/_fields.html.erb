@@ -1,0 +1,16 @@
+<%= f.input :first_name, label_html: { class: 'active' } %>
+<%= f.input :last_name, label_html: { class: 'active' } %>
+<% if @user.phone.empty? %>
+    <%= f.input :phone, label_html: { class: 'active' } %>
+<% end %>
+<% if @user.email.empty? %>
+    <%= f.input :email, label_html: { class: 'active' } %>
+<% end %>
+
+<%= f.radio_button :role, 'Administrator' %> 
+<%= f.label :role, 'Administrator', :value => 'Administrator' %>
+<%= f.radio_button :role, 'Provider' %>
+<%= f.label :role, 'Provider', :value => 'Provider' %>
+<%= f.radio_button :role, 'Customer' %>
+<%= f.label :role, 'Customer', :value => 'Customer' %>
+<%= f.input :active %>

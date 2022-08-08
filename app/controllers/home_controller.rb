@@ -20,7 +20,7 @@ class HomeController < ApplicationController
     def how_it_works
     end
 
-    def portfolio
+    def pricing
     end
 
     def blog

@@ -57,7 +57,8 @@ class CognitoClient
       "Content-Type": "application/x-amz-json-1.1"
     }
 
-    resp = Excon.post(CognitoUrls.refresh_token_uri,
+    resp = Excon.post(#CognitoUrls.refresh_token_uri,
+                      'https://cognito-idp.ap-south-1.amazonaws.com',
                       :headers => hdrs,
                       :body => params.to_json)
     if resp.status != 200

@@ -6,5 +6,9 @@
     <b>Email:&nbsp;&nbsp;</b><br>
       
       <%= "Email: #{@user.email}"%><br /><br /> 
+    
+    <a href="<%= edit_user_path(@user) %>" class="pi-join-btn pi-desktop">Edit My Info</a>
+        <%= line_chart User.group_by_day(:created_at).count %>
   </div>
+
 </div>

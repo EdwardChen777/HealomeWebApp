@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_11_054359) do
+ActiveRecord::Schema.define(version: 2022_08_08_005905) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "recipient"
+    t.string "street_1"
+    t.string "street_2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.boolean "active"
+    t.boolean "is_billing"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
 
   create_table "cognitos", force: :cascade do |t|
     t.integer "user_id"
@@ -21,6 +36,27 @@ ActiveRecord::Schema.define(version: 2022_07_11_054359) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_cognitos_on_user_id"
+  end
+
+  create_table "plan_prices", force: :cascade do |t|
+    t.integer "plan_id"
+    t.float "price"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_plan_prices_on_plan_id"
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "biomarkers"
+    t.boolean "has_blood_tests"
+    t.boolean "can_upload_past_results"
+    t.boolean "includes_wearables"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sessions", force: :cascade do |t|

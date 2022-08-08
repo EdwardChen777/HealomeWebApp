@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'home/temp', to: 'home#temp', as: :temp
   get 'home/company', to: 'home#company', as: :company
   get 'home/how_it_works', to: 'home#how_it_works', as: :how_it_works
-  get 'home/portfolio', to: 'home#portfolio', as: :portfolio
+  get 'home/pricing', to: 'home#pricing', as: :pricing
   get 'home/blog', to: 'home#blog', as: :blog
   get 'home/dashboard', to: 'home#dashboard', as: :dashboard
 
@@ -25,4 +25,15 @@ Rails.application.routes.draw do
   resources :users
 
   #root to: 'home#index'
+
+  post "checkout/create", to: "checkout#create"
+  get "success", to: "checkout#success"
+  get "cancel", to: "checkout#cancel"
+
+  get 'show_items' => 'cart#show_items', as: :view_cart
+  get 'cart/:id/add_item' => 'cart#add_item', as: :add_item
+  get 'cart/:id/remove_item' => 'cart#remove_item', as: :remove_item
+  get 'empty_cart' => 'cart#empty_cart', as: :empty_cart
+  get 'checkout' => 'cart#checkout', as: :checkout
+
 end
