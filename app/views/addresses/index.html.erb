@@ -1,0 +1,82 @@
+<div class="pi-wrapper">
+    <div class="pi-breadcrumbs">
+        <div class="breadcrumbs-wrap">
+            <%# <img src="./img/portfolio/banner-inner.jpg" alt="Breadcrumbs Image"> %>
+            <%= image_tag "portfolio/banner-inner.jpg" %>
+            <div class="breadcrumbs-inner">
+                <div class="container">
+                    <%# <img class="pi__inner__shape" src="./img/portfolio/1.png" alt="Breadcrumbs Image"> %>
+                    <%= image_tag "portfolio/1.png", class: "pi__inner__shape" %>
+                    <div class="breadcrumbs-text">
+                        <h1 class="breadcrumbs-title">Addresses</h1>
+                        <div class="pi-nav">
+                            <ul>
+                            <li><a href="https://reactheme.com/products/html/saasi/index.html">Home</a></li>
+                            <li>My Account</li>
+                            <li>Addresses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </div>
+    <br/><br/>
+
+    <% if @active_addresses.empty? %>
+        <h4>No active addresses at this time.</h4>
+        <table class="striped highlight">
+            <thead>
+                <th>Recipient</th>
+                <th>Street_1</th>
+                <th>Location</th>
+                <th class="align_center">Options</th>
+            </thead>
+            <% for address in @inactive_addresses %>
+                <tr>
+                    <td><%= address.recipient %></td>
+                    <td><%= address.street_1 %></td>
+                    <td><%= link_to "#{address.city}, #{address.state} #{address.zip}", address_path(address) %></td>
+                    <td class="align_center">
+                        <%= link_to edit_address_path(address) do %>
+                            <i class="material-icons">edit</i>
+                        <% end %>
+                        &nbsp;&nbsp;&nbsp;&nbsp; 
+                        <%= link_to(address_path(address), method: :delete, data: { confirm: 'Are you sure you wish to delete this information?' }) do %>
+                            <i class="material-icons">delete</i>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+        </table>
+    <% else %>
+        <table class="striped highlight">
+            <thead>
+                <th>Recipient</th>
+                <th>Street_1</th>
+                <th>Location</th>
+                <th class="align_center">Options</th>
+            </thead>
+            <% for address in @active_addresses %>
+                <tr>
+                    <td><%= address.recipient %></td>
+                    <td><%= address.street_1 %></td>
+                    <td><%= link_to "#{address.city}, #{address.state} #{address.zip}", address_path(address) %></td>
+                    <td class="align_center">
+                        <%= link_to edit_address_path(address) do %>
+                            <i class="material-icons">edit</i>
+                        <% end %>
+                        &nbsp;&nbsp;&nbsp;&nbsp; 
+                        <%= link_to(address_path(address), method: :delete, data: { confirm: 'Are you sure you wish to delete this information?' }) do %>
+                            <i class="material-icons">delete</i>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+        </table>
+        <td><h4>Inactive Customers</h4></td>
+        <br />
+        <%= will_paginate @active_addresses, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+    <% end %>
+    <p>&nbsp;</p>
+</div>

@@ -58,6 +58,10 @@ Rails.application.config.assets.precompile += %w( all/jk-menus.js )
 Rails.application.config.assets.precompile += %w( all/plugins.js )
 Rails.application.config.assets.precompile += %w( all/main.js )
 
+Rails.application.config.assets.precompile += %w( all/theia-sticky-sidebar.js )
+Rails.application.config.assets.precompile += %w( all/imagesloaded.pkgd.min.js )
+Rails.application.config.assets.precompile += %w( all/isotope.pkgd.min.js )
+
 
 #For appland testing
 # Rails.application.config.assets.precompile += %w( appland/animate.css )

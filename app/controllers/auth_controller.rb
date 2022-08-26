@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+  include AppHelpers::Cart
     def signin
       unless params[:code]
         render :nothing => true, :status => :bad_request
@@ -32,6 +33,7 @@ class AuthController < ApplicationController
                                                 audience: resp.id_token[:aud],
                                                 refresh_token: resp.refresh_token)
         session[:cognito_id] = cognito_session.id
+        session[:cart] = create_cart
       end
   
       # Alternatively, you could redirect to a saved URL

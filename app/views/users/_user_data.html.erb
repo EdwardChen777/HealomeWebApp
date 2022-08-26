@@ -1,14 +1,26 @@
-<div class="card">
-  <div class="card-panel hoverable">
-    
-    <%= "A GPBO customer since #{@user.created_at.year}"%><br /><br />
+<b>Email:&nbsp;&nbsp;</b><br>
+<% if @user.email.empty?%>
+  <p>Not provided</p>
+<% else%>
+  <%= "Email: #{@user.email}"%><br />                
+<% end %>   
+<hr> 
 
-    <b>Email:&nbsp;&nbsp;</b><br>
-      
-      <%= "Email: #{@user.email}"%><br /><br /> 
-    
-    <a href="<%= edit_user_path(@user) %>" class="pi-join-btn pi-desktop">Edit My Info</a>
-        <%= line_chart User.group_by_day(:created_at).count %>
-  </div>
+<b>Phone:&nbsp;&nbsp;</b><br>
+  <% if @user.email.empty? %>
+  <p>Not provided</p>
+<% else %>
+  <%= "Phone: #{@user.phone}"%><br />                
+<% end %>
 
-</div>
+<hr>
+
+<b>Address:&nbsp;&nbsp;</b><br>
+<% if @addresses.nil? %>
+  <p>Not provided</p>
+<% else %>
+  <%= "Address: #{@addresses.zip}"%><br />                
+<% end %>               
+
+
+        <%# <%= line_chart User.group_by_day(:created_at).count %> 

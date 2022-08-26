@@ -1,0 +1,23 @@
+<b>Email:&nbsp;&nbsp;</b><br>
+<% if @user.email.empty?%>
+  <p>Not provided</p>
+<% else%>
+  <%= "Email: #{@user.email}"%><br />                
+<% end %>   
+<hr> 
+
+<b>Phone:&nbsp;&nbsp;</b><br>
+  <% if @user.email.empty? %>
+  <p>Not provided</p>
+<% else %>
+  <%= "Phone: #{@user.phone}"%><br />                
+<% end %>
+
+<hr>
+
+<b>Address:&nbsp;&nbsp;</b><br>
+<% if @addresses.nil? %>
+  <p>Not provided</p>
+<% else %>
+  <%= "Address: #{@addresses.zip}"%><br />                
+<% end %>               

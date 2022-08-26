@@ -128,6 +128,7 @@ ul {
   display: inline-block;
   font-weight: 500;
   transition: all 0.5s ease 0s;
+
 }
 .pi-btn:hover {
   color: #ffffff;
@@ -4432,13 +4433,16 @@ button.pi__close .icon-bar:nth-child(3) {
   position: relative;
 }
 .pi-contact-box .container .blog-form .pi-input {
-  position: relative;
-}
-.pi-contact-box .container .blog-form .pi-input img {
+  /* position: relative; */
   position: absolute;
   bottom: 55px;
   left: 30px;
 }
+/* .pi-contact-box .container .blog-form .pi-input img {
+  position: absolute;
+  bottom: 55px;
+  left: 30px;
+} */
 .pi-contact-box .container .blog-form .pi-textarea img {
   position: absolute;
   top: 57px;
@@ -4499,7 +4503,7 @@ button.pi__close .icon-bar:nth-child(3) {
   outline: none;
   box-shadow: none;
   cursor: pointer;
-  float: right;
+  float: left;
   clear: both;
 }
 .pi-contact-box .container .blog-form form button:hover {
@@ -4908,6 +4912,10 @@ body.pi-page-color .pi-pricing .pi-price-second-color .select:hover {
   border-color: #465fe9;
 }
 
+
+/*
+Customized CSS
+*/
 /*
 for price points
 */
@@ -4994,3 +5002,121 @@ for price points
 .price-col button:hover{
   background: #e33058;
 }
+
+.pi-contact-box .d-flex{
+  margin: 50px 0;
+}
+
+/* .info-row{
+  margin: 50px 0;
+} */
+.custom-btn .pi-btn{
+  margin: 50px 0;
+}
+
+/*===========================
+       04.ABOUT css 
+===========================*/
+.about-area {
+  background-color: #F3FDFF; }
+
+.about-image {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 767px) {
+    .about-image {
+      margin-left: 0;
+      padding-top: 65px;
+      padding-bottom: 45px; } }
+  .about-image .about-shape {
+    background: -webkit-linear-gradient(#61009d 0%, #cb107a 100%);
+    background: -o-linear-gradient(#61009d 0%, #cb107a 100%);
+    background: linear-gradient(#61009d 0%, #cb107a 100%);
+    width: 394px;
+    height: 394px;
+    border-radius: 50%;
+    position: relative; }
+    @media (max-width: 767px) {
+      .about-image .about-shape {
+        width: 294px;
+        height: 294px; } }
+    .about-image .about-shape::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: '';
+      -webkit-transform: scale(1.1) rotate(25deg);
+      -moz-transform: scale(1.1) rotate(25deg);
+      -ms-transform: scale(1.1) rotate(25deg);
+      -o-transform: scale(1.1) rotate(25deg);
+      transform: scale(1.1) rotate(25deg);
+      border-radius: 50%;
+      border: 2px solid #61009D;
+      border-top-color: transparent;
+      border-right-color: transparent; }
+  .about-image .app {
+    position: relative;
+    -webkit-transform: rotate(-25deg) translateY(-15%);
+    -moz-transform: rotate(-25deg) translateY(-15%);
+    -ms-transform: rotate(-25deg) translateY(-15%);
+    -o-transform: rotate(-25deg) translateY(-15%);
+    transform: rotate(-25deg) translateY(-15%);
+    max-width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 95px;
+    -webkit-box-shadow: -15px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -15px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: -15px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50px; }
+    @media (max-width: 767px) {
+      .about-image .app {
+        max-width: 190px;
+        border-radius: 25px;
+        top: 60px; } }
+
+.about-content .main-btn {
+  margin-top: 40px; }
+
+  .main-btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid #0898E7;
+    padding: 0 25px;
+    font-size: 16px;
+    height: 55px;
+    line-height: 51px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    background-color: #0898E7; }
+    .main-btn:hover {
+      background-color: rgba(8, 152, 231, 0.7);
+      color: #fff;
+      border-color: transparent; }
+    .main-btn.main-btn-2 {
+      background-color: transparent;
+      color: #525A63;
+      border-color: #525A63; }
+      .main-btn.main-btn-2:hover {
+        background-color: rgba(82, 90, 99, 0.5);
+        color: #525A63; }

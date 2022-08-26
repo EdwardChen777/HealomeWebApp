@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     end
 
     def show
-    
+        # @addresses = @user.addresses.by_recipient.active.to_a
     end
 
     def destroy

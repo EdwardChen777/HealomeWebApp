@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'home/pricing', to: 'home#pricing', as: :pricing
   get 'home/blog', to: 'home#blog', as: :blog
   get 'home/dashboard', to: 'home#dashboard', as: :dashboard
+  get 'home/blogsingle', to: 'home#blogsingle', as: :blogsingle
 
   #post 'auth/sign_in', to: 'auth#sign_in', as: :login
   #post 'auth/sign_out', to: 'auth#sign_out', as: :logout
@@ -23,8 +24,17 @@ Rails.application.routes.draw do
   get 'auth/sign_out', to: 'auth#signout', as: :auth_sign_out
 
   resources :users
+  resources :plans
+  resources :addresses
+
+  patch 'plans/:id/toggle_blood_test', to: 'plans#toggle_blood_test', as: :toggle_blood_test
+  patch 'plans/:id/toggle_past_results', to: 'items#toggle_past_results', as: :toggle_past_results
+  patch 'plans/:id/toggle_wearables', to: 'items#toggle_wearables', as: :toggle_wearables
 
   #root to: 'home#index'
+
+  get 'plan_prices/new', to:'plan_prices#new', as: :new_plan_price
+  post 'plan_prices', to:'plan_prices#create', as: :plan_prices
 
   post "checkout/create", to: "checkout#create"
   get "success", to: "checkout#success"

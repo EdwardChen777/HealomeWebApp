@@ -1,0 +1,90 @@
+<div class = "info-row">
+  <div class="info-detail">
+      <%= "A GPBO customer since #{@user.created_at.year}"%><br /><br />
+  </div>
+</div>
+<div class = "info-row">
+  <div class="info-detail">
+    <div class="info-header">
+      <b>Email:&nbsp;&nbsp;</b><br>
+      <% if @user.email.empty?%>
+        <p>Not provided</p>
+      <% else%>
+        <%= "Email: #{@user.email}"%><br />                
+      <% end %>                
+    </div> 
+    <hr>
+  </div>
+</div>
+<div class = "info-row">
+  <div class="info-detail">
+    <div class="info-header">
+      <b>Phone:&nbsp;&nbsp;</b><br>
+      <% if @user.email.empty? %>
+        <p>Not provided</p>
+      <% else %>
+        <%= "Phone: #{@user.phone}"%><br />                
+      <% end %>                
+    </div> 
+    <hr>
+  </div>
+</div>
+<div class = "info-row">
+  <div class="info-detail">
+    <div class="info-header">
+      <b>Address:&nbsp;&nbsp;</b><br>
+      <% if @addresses.nil? %>
+        <p>Not provided</p>
+      <% else %>
+        <%= "Address: #{@addresses.zip}"%><br />                
+      <% end %>                
+  </div> 
+  <hr>
+</div>
+
+
+        <%# <%= line_chart User.group_by_day(:created_at).count %> 
+
+<div >
+  <div>
+      <%= "A GPBO customer since #{@user.created_at.year}"%><br /><br />
+  </div>
+</div>
+<div>
+  <div>
+    <div>
+      <b>Email:&nbsp;&nbsp;</b><br>
+      <% if @user.email.empty?%>
+        <p>Not provided</p>
+      <% else%>
+        <%= "Email: #{@user.email}"%><br />                
+      <% end %>                
+    </div> 
+    <hr>
+  </div>
+</div>
+<div >
+  <div>
+    <div>
+      <b>Phone:&nbsp;&nbsp;</b><br>
+      <% if @user.email.empty? %>
+        <p>Not provided</p>
+      <% else %>
+        <%= "Phone: #{@user.phone}"%><br />                
+      <% end %>                
+    </div> 
+    <hr>
+  </div>
+</div>
+<div>
+  <div>
+    <div>
+      <b>Address:&nbsp;&nbsp;</b><br>
+      <% if @addresses.nil? %>
+        <p>Not provided</p>
+      <% else %>
+        <%= "Address: #{@addresses.zip}"%><br />                
+      <% end %>                
+  </div> 
+  <hr>
+</div>

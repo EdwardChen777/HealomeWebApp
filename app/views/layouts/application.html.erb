@@ -16,7 +16,8 @@
         <%# <%= stylesheet_link_tag  "application","bootstrap.min", "font-awesome.min", "all", "jk-menus", "animate", "owl.carousel", "slick", "flaticon", "magnific-popup", "pi-animations", "aos", "style", "pi-spacing", "responsive", "theme", media: 'all' %> 
         <%= stylesheet_link_tag "application", media: 'all'%>
         
-        
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
     </head>
     <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"> 
         
@@ -97,7 +98,9 @@
                                         </a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="<%= users_path %>">Profile</a></li>
+                                                <a href="<%= users_path %>">Profile</a>
+                                                <a href = "<%= user_path(@current_user) %>">Profile Update</a>
+                                            </li>
                                             <li>
                                                 <a href="<%= dashboard_path %>">Dashboard</a>
                                             </li>
@@ -110,6 +113,16 @@
                               <a href="<%= signin_path %>" class="pi-join-btn pi-desktop">Sign In</a>
                             <% else %>
                               <a href="<%= signout_path %>" class="pi-join-btn pi-desktop">Sign Out</a>
+                            <% end %>
+                            <% if session[:cart].nil? || session[:cart].empty? %>
+                                <a href="<%= view_cart_path %>" class="pi-join-btn pi-desktop">
+                                    <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
+                                </a>
+                            <% else %>
+                                <a href="<%= view_cart_path %>" class="pi-join-btn pi-desktop">
+                                    <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
+                                    <%= link_to "#{session[:cart].size}", view_cart_path %>
+                                </a>
                             <% end %>
                         </div>
                     </nav>
@@ -257,12 +270,17 @@
         <%# <script src="../../assets/js/all/main.js"></script> %>
         <%= javascript_include_tag 'all/main', 'data-turbolinks-track': 'reload' %>
 
+        <%= javascript_include_tag "all/theia-sticky-sidebar", 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag "all/imagesloaded.pkgd.min", 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag "all/isotope.pkgd.min", 'data-turbolinks-track': 'reload' %>
+
         <!-- for faq -->
         <%= javascript_include_tag 'faq/theme', 'data-turbolinks-track': 'reload' %>
 
         <%= javascript_include_tag 'faq/bootstrap.min', 'data-turbolinks-track': 'reload' %>
 
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        
         <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
     
 </body></html>

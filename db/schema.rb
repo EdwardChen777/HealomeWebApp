@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_08_005905) do
+ActiveRecord::Schema.define(version: 2022_08_26_170717) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -68,6 +68,18 @@ ActiveRecord::Schema.define(version: 2022_08_08_005905) do
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "plan_id"
+    t.string "customer_id"
+    t.integer "user_id"
+    t.string "status"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -78,6 +90,7 @@ ActiveRecord::Schema.define(version: 2022_08_08_005905) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sub", null: false
+    t.string "stripe_id"
   end
 
 end

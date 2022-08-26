@@ -28,4 +28,7 @@ class HomeController < ApplicationController
 
     def dashboard
     end 
+
+    def blogsingle
+    end 
 end

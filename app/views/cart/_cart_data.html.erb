@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-content">
+    <h5>Your Cart</h5><br />
+
+  <% if @items_in_cart.empty? %>
+    <p> Your cart is currently empty.</p>
+    <%= link_to "Start shopping", plans_path %><br />
+  <% else %>
+  <% for order_item in @items_in_cart %>
+        <%= link_to order_item.item.name, item_path(order_item.item) %> <br />
+        <%= "Unit Price: #{number_to_currency(order_item.item.current_retail_price)}" %> <br />
+        <%= "Quantity: #{order_item.quantity}" %> <br />
+        <%= "Subtotal: #{number_to_currency(order_item.subtotal)}" %> <br />
+        <%= link_to "Remove", remove_item_path(order_item.item.id) %><br />
+        
+    <% end %>
+
+    <%= "Subtotal: #{number_to_currency(@subtotal)}" %> <br />
+    <%= "Shipping: #{number_to_currency(@shipping_cost)}" %> <br />
+    <%= "Grand Total: #{number_to_currency(@total)}" %> <br />
+    <%= link_to "Continue shopping", items_path %><br />
+    <%= link_to "Checkout", checkout_path %><br />
+    <%= link_to "Empty cart", empty_cart_path %><br />
+    <% end %>
+  </div>
+</div>

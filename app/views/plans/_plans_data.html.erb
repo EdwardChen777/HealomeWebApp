@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-content">
+    <h5 class = 'center'>Plan Information</h5><br />
+    <b>Description:&nbsp;&nbsp;</b>
+    <%= @plan.description %><br /><br />
+
+      <%= "Biomarkers: #{@plan.biomarkers}" %><br /><br />
+
+    <a href="<%= add_item_path(@plan.id) %>" class="pi-btn pi-desktop">Add to Cart</a>
+    <%# <%= link_to "Add to Cart", add_item_path(@plan.id),class: "waves-effect waves-light btn teal lighten-2", border_radius: '100px' %> 
+    
+    <a href="<%= plans_path %>" class="pi-btn pi-desktop">Display All</a><br /><br />
+
+    <%# <% if current_user.role? :admin %> 
+        <%= link_to "Edit #{@plan.name}", edit_plan_path(@plan) %><br /><br />
+
+        <% if @plan.has_blood_tests? %>
+            <%= link_to "No Blood Test", toggle_blood_test_path(@plan), method: :patch %><br /><br />
+        <% else %>
+            <%= link_to "Add Blood Test", toggle_blood_test_path(@plan), method: :patch %><br /><br />
+        <% end %>
+
+        <% if @plan.can_upload_past_results? %>
+            <%= link_to "Remove Past Results", toggle_past_results_path(@plan), method: :patch %><br /><br />
+        <% else %>
+            <%= link_to "Add Past Results", toggle_past_results_path(@plan), method: :patch %><br /><br />
+        <% end %>
+
+        <% if @plan.includes_wearables? %>
+            <%= link_to "Remove Wearables", toggle_wearables_path(@plan), method: :patch %><br /><br />
+        <% else %>
+            <%= link_to "Add Wearables", toggle_wearables_path(@plan), method: :patch %><br /><br />
+        <% end %>
+  </div>
+</div>

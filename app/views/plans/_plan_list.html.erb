@@ -1,0 +1,51 @@
+
+  <h4>Compare Plans</h4>
+  <table class="table table-striped" style="overflow: scroll;">
+    <thead>
+      <%# <th>Name</th>
+      <th>Price</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th> %>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Biomarkers</th>
+      <th>Include Blood Tests</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+    <% for plan in @all %>
+      <tr>
+        
+        <td><%= link_to plan.name, plan_path(plan) %></td>
+        <td><%= plan.description %></td>
+        <td><%= number_to_currency(plan.current_retail_price) %> </td>
+        <td><%= plan.biomarkers %> </td>
+        <td>
+          <% if plan.has_blood_tests? %>
+            <%# <%= fa_icon "check", base: "solid", class: "pi-arrow-btn" %>  
+            <%= image_tag "icons/check.png", style: 'width: 15px' %>
+          <% else %> 
+            <%= image_tag "icons/remove.png", style: 'width: 15px' %>
+          <% end %>
+        </td>
+        <td>
+          <a href="<%= edit_plan_path(plan) %>">
+            <%# <%= fa_icon "pen", base: "solid", class: "pi-arrow-btn" %> 
+            <%= image_tag "icons/pencil.png", style: 'width: 15px' %>
+          </a> 
+        </td>
+        <td>
+          <%= link_to (fa_icon "trash"), plan, confirm: 'Are you sure?', method: :delete %>
+        </td>
+      </tr>     
+    <% end %>
+  </table>
+  
+<p>&nbsp;</p>
+<%# <%= render :partial => "partials/add_new_object", locals: {model_name: 'plan'} %> 
+
+<div class="custom-btn d-flex justify-content-center">
+  <a href="<%= new_plan_path %>" class="pi-btn pi-desktop">Add a New Plan</a>
+</div>

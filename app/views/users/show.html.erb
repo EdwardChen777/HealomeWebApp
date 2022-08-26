@@ -1,5 +1,35 @@
+<div class="pi-wrapper">
+    <div class="pi-breadcrumbs">
+        <div class="breadcrumbs-wrap">
+            <%# <img src="./img/portfolio/banner-inner.jpg" alt="Breadcrumbs Image"> %>
+            <%= image_tag "portfolio/banner-inner.jpg" %>
+            <div class="breadcrumbs-inner">
+                <div class="container">
+                    <%# <img class="pi__inner__shape" src="./img/portfolio/1.png" alt="Breadcrumbs Image"> %>
+                    <%= image_tag "portfolio/1.png", class: "pi__inner__shape" %>
+                    <div class="breadcrumbs-text">
+                        <h1 class="breadcrumbs-title">My Account</h1>
+                        <div class="pi-nav">
+                            <ul>
+                            <li><a href="https://reactheme.com/products/html/saasi/index.html">Home</a></li>
+                            <li>Pricing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </div>
+    <br/><br/>
+
 <%= render partial: "partials/structure2", locals: {model_name: "user", 
                                                          object: @user,
                                                          primary: "user_data", 
-                                                         secondary: "",
-                                                         sidebar: ""} %>
+                                                         secondary: nil,
+                                                         sidebar: "edit_info"} %>
+    <div class="custom-btn d-flex justify-content-center">
+        <a href="<%= edit_user_path(@user) %>" class="pi-btn pi-desktop">Edit My Info</a>
+        <a href="<%= new_address_path %>" class="pi-btn pi-desktop">Add Address</a>
+        <a href="<%= addresses_path %>" class="pi-btn pi-desktop">All Address</a>
+    </div>
+</div>
