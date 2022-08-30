@@ -55,18 +55,7 @@
                             <ul id="jkmenu" class="jk-menus pi-sub-shadow">
                                 <li class="has-sub"><span class="arrow "></span> 
                                   <a href="<%= home_path %>">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="https://reactheme.com/products/html/saasi/index.html">Home One</a></li>
-                                        <li><a href="https://reactheme.com/products/html/saasi/index-two.html">Home Two</a></li>
-                                        <li><a href="https://reactheme.com/products/html/saasi/index-three.html">Home Three</a></li>
-                                    </ul>
                                 </li>                                
-                                <li class="has-sub"><span class="arrow "></span> 
-                                  <a href="<%= company_path %>">Company</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="https://reactheme.com/products/html/saasi/404.html">404 Error</a></li>
-                                    </ul>
-                                </li>
                                 <li class="has-sub"><span class="arrow "></span> 
                                   <a href="<%= how_it_works_path %>">How it Works</a>
                                     <ul class="sub-menu">
@@ -78,8 +67,8 @@
                                   <%# <a href="./portfolio.html">Portfolio</a> %>
                                   <a href="<%= pricing_path %>">Pricing</a>
                                     <ul class="sub-menu">
-                                        <li><a href="https://reactheme.com/products/html/saasi/portfolio.html">Portfolio</a></li>
-                                        <li><a href="https://reactheme.com/products/html/saasi/portfolio-details.html">Portfolio Single</a></li>
+                                        <li><a href= <%= plans_path %>>Compare Price Plans</a></li>
+                                        <%# <li><a href="https://reactheme.com/products/html/saasi/portfolio-details.html">Portfolio Single</a></li> %>
                                     </ul>
                                 </li>
                                 <li class="has-sub"><span class="arrow "></span> 
@@ -115,13 +104,14 @@
                               <a href="<%= signout_path %>" class="pi-join-btn pi-desktop">Sign Out</a>
                             <% end %>
                             <% if session[:cart].nil? || session[:cart].empty? %>
-                                <a href="<%= view_cart_path %>" class="pi-join-btn pi-desktop">
+                                <a href="<%= checkout_path %>" class="pi-join-btn pi-desktop">
                                     <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
                                 </a>
                             <% else %>
-                                <a href="<%= view_cart_path %>" class="pi-join-btn pi-desktop">
+                                <a href="<%= checkout_path %>" class="pi-join-btn pi-desktop">
                                     <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
-                                    <%= link_to "#{session[:cart].size}", view_cart_path %>
+                                    <%# <%= link_to "#{session[:cart].size}", view_cart_path %> 
+                                    <%= link_to "#{session[:cart].size}", checkout_path %>
                                 </a>
                             <% end %>
                         </div>
@@ -268,7 +258,7 @@
         <%= javascript_include_tag 'all/plugins', 'data-turbolinks-track': 'reload' %>   
 		<!-- main js -->
         <%# <script src="../../assets/js/all/main.js"></script> %>
-        <%= javascript_include_tag 'all/main', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'all/main', 'data-turbolinks-track': 'false' %>
 
         <%= javascript_include_tag "all/theia-sticky-sidebar", 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag "all/imagesloaded.pkgd.min", 'data-turbolinks-track': 'reload' %>

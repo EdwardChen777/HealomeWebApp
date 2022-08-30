@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   resources :plans
   resources :addresses
 
+  resources :webhooks, only: [:create]
+
   patch 'plans/:id/toggle_blood_test', to: 'plans#toggle_blood_test', as: :toggle_blood_test
   patch 'plans/:id/toggle_past_results', to: 'items#toggle_past_results', as: :toggle_past_results
   patch 'plans/:id/toggle_wearables', to: 'items#toggle_wearables', as: :toggle_wearables
@@ -36,14 +38,14 @@ Rails.application.routes.draw do
   get 'plan_prices/new', to:'plan_prices#new', as: :new_plan_price
   post 'plan_prices', to:'plan_prices#create', as: :plan_prices
 
-  post "checkout/create", to: "checkout#create"
+  get "checkout/create", to: "checkout#create", as: :checkout
   get "success", to: "checkout#success"
   get "cancel", to: "checkout#cancel"
 
-  get 'show_items' => 'cart#show_items', as: :view_cart
-  get 'cart/:id/add_item' => 'cart#add_item', as: :add_item
-  get 'cart/:id/remove_item' => 'cart#remove_item', as: :remove_item
-  get 'empty_cart' => 'cart#empty_cart', as: :empty_cart
-  get 'checkout' => 'cart#checkout', as: :checkout
+  # get 'show_items' => 'cart#show_items', as: :view_cart
+  # get 'cart/:id/add_item' => 'cart#add_item', as: :add_item
+  # get 'cart/:id/remove_item' => 'cart#remove_item', as: :remove_item
+  # get 'empty_cart' => 'cart#empty_cart', as: :empty_cart
+  # get 'checkout' => 'cart#checkout', as: :checkouts
 
 end

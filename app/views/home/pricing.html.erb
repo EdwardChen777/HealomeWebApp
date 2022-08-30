@@ -208,6 +208,209 @@
                 </div>
             </div>
         <div>
+        <div class="pi-pricing"> 
+                    <div class="pi__shape_bg4" data-paroller-factor="0.08" style="background: url(&quot;assets/images/pricing/p1.png&quot;) center 0px no-repeat;">
+                    </div>                   
+                    <div class="pricing-switcher">
+                        <div class="pi-sec-title">
+                            <i class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;"><img src="./img/home/4.png" alt=""></i>
+                            <h2 class="pi-title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">Simlple and <br> transparent pricing</h2>
+                            <p class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">The key to your success on Fiverr is the brand you build for yourself.!</p>                            
+                        </div>
+                        <p class="fieldset wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
+                            <input type="radio" name="duration-1" value="monthly" id="monthly-1">
+                            <label for="monthly-1" class="pi-mon pi-actives">Monthly</label>
+                            <input type="radio" name="duration-1" value="yearly" id="yearly-1">
+                            <label for="yearly-1" class="pi-anu">Annual</label>
+                            <span class="switch"></span>
+                        </p>
+                    </div>                    
+                    <div class="pi-price-inner">
+                        <div id="layer6" class="layer6" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+                            <div data-depth="0.10" style="transform: translate3d(-1.9px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                                <img class="pi-absolute price-bg" src="./img/home/bg1.png" alt="">
+                            </div>
+                        </div>
+                        <ul class="pricing-list bounce-invert wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">                        
+                            <li>
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/1(3).png" alt="">
+                                            </div>
+                                            <h4>Basic</h4>
+                                            <div class="price">
+                                                <span class="value">$49.99</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for individual content creators</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li class="dark">Content Creation</li>
+                                                <li class="dark">Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <%# <a class="select" href="https://reactheme.com/products/html/saasi/#">Try for Free</a> %>
+                                            <%= form_tag checkout_path, method: :get, data: {turbo: false} do %>
+                                                <input type = "hidden" name = "price_id" value = "<%= Rails.application.credentials.dig(:stripe, :pricing, :basic_month)%>" >
+                                                <input type = "submit" value = "Subscribe" class = "pi-price-btn">
+                                            <% end %>
+                                        </div>
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">                                    
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/2(3).png" alt="">
+                                            </div>
+                                            <h4>Intermediate</h4>
+                                            <div class="price">
+                                                <span class="value">$34</span>
+                                                <span class="duration">mo</span>
+                                                <p>For small businesses looking for big growth</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <%# <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a> %>
+                                            <%= form_tag checkout_path, method: :post, data: {turbo: false} do %>
+                                                <input type = "hidden" name = "price_id" value = "<%= Rails.application.credentials.dig(:stripe, :pricing, :intermediate_month)%>" >
+                                                <input type = "submit" value = "Subscribe" class = "pi-price-btn">
+                                            <% end %>
+                                        </div>                                    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="exclusive">
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/2(3).png" alt="">
+                                            </div>
+                                            <h4>Intermediate</h4>
+                                            <div class="price">
+                                                <span class="value">$79.99</span>
+                                                <span class="duration">mo</span>
+                                                <p>For small businesses looking for big growth</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <%# <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a> %>
+                                            <%= form_tag checkout_path, method: :get, data: {turbo: false} do %>
+                                                <input type = "hidden" name = "price_id" value = "<%= Rails.application.credentials.dig(:stripe, :pricing, :intermediate_month)%>" >
+                                                <input type = "submit" value = "Subscribe" class = "pi-price-btn">
+                                            <% end %>
+                                        </div> 
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/3(2).png" alt="">
+                                            </div>
+                                            <h4>Intermediate</h4>
+                                            <div class="price">
+                                                <span class="value">$799.99</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                            <%= form_tag checkout_path, method: :get, data: {turbo: false} do %>
+                                                <input type = "hidden" name = "price_id" value = "<%= Rails.application.credentials.dig(:stripe, :pricing, :intermediate_year)%>" >
+                                                <input type = "submit" value = "Subscribe" class = "pi-price-btn">
+                                            <% end %>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="pricing-wrapper">
+                                    <li data-type="monthly" class="is-visible is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/3(2).png" alt="">
+                                            </div>
+                                            <h4>Enterprise</h4>
+                                            <div class="price">
+                                                <span class="value">$99.99</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>63 Biomarkers</li>
+                                                <li>Blood tests included</li>
+                                                <li>Free wearables included</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <%# <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a> %>
+                                            <%= form_tag checkout_path, method: :get, data: {turbo: false} do %>
+                                                <input type = "hidden" name = "price_id" value = "<%= Rails.application.credentials.dig(:stripe, :pricing, :premium_month)%>" >
+                                                <input type = "submit" value = "Subscribe" class = "pi-price-btn">
+                                            <% end %>
+                                        </div>
+                                    </li>
+                                    <li data-type="yearly" class="is-hidden is-ended">
+                                        <div class="pricing-header">
+                                            <div class="pi-image">
+                                                <img src="./img/home/3(2).png" alt="">
+                                            </div>
+                                            <h4>Enterprise</h4>
+                                            <div class="price">
+                                                <span class="value">$99</span>
+                                                <span class="duration">mo</span>
+                                                <p>Perfect for organizations with diverse video needs</p>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <ul class="pricing-features">
+                                                <li>Strategy &amp; Planning</li>
+                                                <li>Vsaas Design</li>
+                                                <li>Content Creation</li>
+                                                <li>Better UX</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pi-price-btn">
+                                            <a class="select" href="https://reactheme.com/products/html/saasi/#">Get Started</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
         <%= link_to 'All Plans at Healome', plans_path %>
 
         <!-- Scroll to Top Start -->
@@ -215,5 +418,5 @@
             <i class="fa flaticon-back-1"></i>
         </div> 
         <!-- Scroll to Top End -->
-    
+    <%= javascript_include_tag "all/main.js", "data-turbolinks-track" => true  %>
 </body></html>

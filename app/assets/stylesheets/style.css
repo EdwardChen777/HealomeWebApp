@@ -5018,7 +5018,8 @@ for price points
        04.ABOUT css 
 ===========================*/
 .about-area {
-  background-color: #F3FDFF; }
+  background-color: #F3FDFF; 
+}
 
 .about-image {
   position: relative;
@@ -5120,3 +5121,28 @@ for price points
       .main-btn.main-btn-2:hover {
         background-color: rgba(82, 90, 99, 0.5);
         color: #525A63; }
+
+/*===========================
+===========================*/
+
+/*===========================
+       Success Page CSS
+===========================*/
+.popup{
+  width: 500px;
+  height: 300px;
+  background: #ddd;
+  border-radius: 6px;
+  position: relative;
+  top:50%;
+  left: 45%;
+  transform: translate(-50%,-0%);
+  text-align: center;
+  padding: 0 30px 30px;
+  margin: 50px 50px;
+  color: #333 ;
+}
+
+.popup h2{
+  padding: 70px 10px;
+}

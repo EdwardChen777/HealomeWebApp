@@ -15,6 +15,7 @@ gem "font-awesome-sass", "~> 6.1.2"
 gem "chartkick"
 gem "groupdate"
 gem 'stripe'
+gem 'carrierwave'
 
 gem 'cancancan', '3.1.0'   # '3.1.0'
 gem 'validates_timeliness', '5.0.0'

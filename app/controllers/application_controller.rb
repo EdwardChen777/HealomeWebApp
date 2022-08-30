@@ -2,6 +2,7 @@ require 'cognito_jwt_keys'
 require 'cognito_client'
 class ApplicationController < ActionController::Base
     before_action :check_signed_in
+    before_action :set_stripe_key
 
   def check_signed_in
     @is_signed_in = false
@@ -80,4 +81,9 @@ class ApplicationController < ActionController::Base
   def check_login
     redirect_to login_path, alert: "You need to log in to view this page." if current_user.nil?
   end
+
+  def set_stripe_key
+    Stripe.api_key = Rails.application.credentials.dig(:stripe, :secret_key)
+  end
+
 end
