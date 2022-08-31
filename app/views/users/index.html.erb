@@ -32,4 +32,5 @@
         <a href="<%= new_address_path %>" class="pi-btn pi-desktop">Add Address</a>
         <a href="<%= addresses_path %>" class="pi-btn pi-desktop">All Address</a>
     </div>
+    <%= image_tag @user.profile_url.to_s, class: "pi__inner__shape" %>
 </div>

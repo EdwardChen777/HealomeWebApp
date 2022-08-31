@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    # mount_uploader :profile, ImageUploader
+
     has_many :cognito
     has_many :subscription 
     scope :by_role,      -> { order(:role) }
@@ -20,6 +22,14 @@ class User < ApplicationRecord
     
     def proper_name
         "#{first_name} #{last_name}"
+    end
+
+    def subscribed?
+        if self.subscription.any? 
+            self.subscription.where(status: 'active').any?
+        else
+            false
+        end
     end
 
     #validates password 

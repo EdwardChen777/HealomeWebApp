@@ -19,6 +19,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>                
     </div>
@@ -32,6 +33,25 @@
     <div class="custom-btn d-flex justify-content-center">
         <a href="<%= edit_user_path(@user) %>" class="pi-btn pi-desktop">Edit My Info</a>
         <a href="<%= new_address_path %>" class="pi-btn pi-desktop">Add Address</a>
-        <a href="<%= addresses_path %>" class="pi-btn pi-desktop">All Address</a>
+        <a href="<%= addresses_path %>" class="pi-btn pi-desktop">Manage Address</a>
     </div>
+    <div class = "card">
+        <div class="card-header">
+            <h2>My Subscriptions</h2>
+        </div>
+
+        <div class="card-body">
+            <% if @user.subscribed? %>
+                <a href="<%= billings_path %>" class="pi-btn pi-desktop">Manage Subscriptions</a>
+                <% @user.subscriptions.last.status %>
+            <% else %>
+            <p>You don't have any active subscriptions now.</p>
+                <a href="<%= pricing_path %>" class="pi-btn pi-desktop">Subscribe Now</a>
+            <%end%>
+        </div>
+
+        
+    </div>
+
+    <%# <%= image_tag user.profile_url.to_s, class: "pi__inner__shape" %> 
 </div>

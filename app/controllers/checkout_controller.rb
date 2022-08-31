@@ -4,7 +4,6 @@ class CheckoutController < ApplicationController
       price = params[:price_id]
       @session = Stripe::Checkout::Session.create({
         customer: @current_user.stripe_id,
-        customer_email: @current_user.email,
         payment_method_types: ['card'],
         # line_items: @cart.collect { |item| item.to_builder.attributes! },
         line_items: [{
@@ -12,6 +11,7 @@ class CheckoutController < ApplicationController
           price: price
         }],
         mode: 'subscription',
+        
         success_url: success_url + "?session_id={CHECKOUT_SESSION_ID}",
         cancel_url: pricing_url,
         client_reference_id: @current_user.id

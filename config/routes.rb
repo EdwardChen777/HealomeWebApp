@@ -42,6 +42,9 @@ Rails.application.routes.draw do
   get "success", to: "checkout#success"
   get "cancel", to: "checkout#cancel"
 
+  resources :billings, only: :create
+  resources :webhooks, only: :create
+
   # get 'show_items' => 'cart#show_items', as: :view_cart
   # get 'cart/:id/add_item' => 'cart#add_item', as: :add_item
   # get 'cart/:id/remove_item' => 'cart#remove_item', as: :remove_item

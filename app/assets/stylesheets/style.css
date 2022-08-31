@@ -128,12 +128,14 @@ ul {
   display: inline-block;
   font-weight: 500;
   transition: all 0.5s ease 0s;
-
 }
 .pi-btn:hover {
   color: #ffffff;
   box-shadow: 0px 20px 30px 0px rgba(10, 0, 45, 0.1);
 }
+
+
+
 .pi-absolute {
   position: absolute;
 }
@@ -1951,19 +1953,20 @@ ul.pi-tab-content li.active {
 .pi-pricing .pricing-body ul li.dark {
   background: url(assets/images/pricing/icon.png) no-repeat left top 2px;
 }
-.pi-pricing .pi-price-btn a {
+.pi-pricing .pi-price-btn input {
+  background: #96c5f7;
   font-size: 15px;
   color: #1a152e;
   font-weight: 500;
   display: inline-block;
   border-radius: 10px;
-  border: 2px solid #e8e7ea;
+  border: 2px solid #96c5f7;
   padding: 9px 40px;
   transition: all 0.5s ease 0s;
 }
-.pi-pricing .pi-price-btn a:hover {
-  background: #744fff;
-  border: 2px solid #744fff;
+.pi-pricing .pi-price-btn input:hover {
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
   color: #ffffff;
 }
 .pi-pricing .exclusive {
@@ -5011,7 +5014,7 @@ for price points
   margin: 50px 0;
 } */
 .custom-btn .pi-btn{
-  margin: 50px 0;
+  margin: 50px 40px;
 }
 
 /*===========================
@@ -5146,3 +5149,22 @@ for price points
 .popup h2{
   padding: 70px 10px;
 }
+
+.card{
+  left: -1rem;
+  margin: 20px;
+}
+
+.card .card-header{
+  background-color: var(--color-primary);
+}
+.card .card-header h2{
+  color: #fff;
+  padding-top: 5px;
+}
+/* .plan-title{
+  align-items: center;
+}
+.table{
+  justify-content: center;
+} */

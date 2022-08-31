@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_30_031224) do
+ActiveRecord::Schema.define(version: 2022_08_31_033520) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_031224) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "interval"
+    t.string "subscription_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
