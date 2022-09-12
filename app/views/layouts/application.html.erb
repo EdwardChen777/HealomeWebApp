@@ -39,7 +39,7 @@
                     <nav>
                         <!-- Menu Toggle btn-->
                         <div class="menu-toggle">
-                            <div class="logo"><a href="https://reactheme.com/products/html/saasi/index.html">
+                            <div class="logo"><a href="<%= home_path %>">
                                 <%# <img src="../../assets/images/logo/logo.svg" alt="" title=""> %>
                                 <%= image_tag "logo/logo.svg" %>
                             </a></div>
@@ -82,13 +82,12 @@
                                 <%# <li> <a href="./contact.html">Contact</a></li> %>
                                 <% if (@is_signed_in) %>
                                     <li class="has-sub"><span class="arrow "></span> 
-                                        <a href="<%= users_path %>">
+                                        <a href="<%= user_path(@current_user) %>">
                                             <%= fa_icon "user", base: "thin", class: "pi-arrow-btn" %>
                                         </a>
                                         <ul class="sub-menu">
                                             <li>
-                                                
-                                                <a href = "<%= user_path(@current_user) %>">Profile Update</a>
+                                                <a href = "<%= user_path(@current_user) %>">Profile</a>
                                             </li>
                                             <li>
                                                 <a href="<%= dashboard_path %>">Dashboard</a>
@@ -103,17 +102,7 @@
                             <% else %>
                               <a href="<%= signout_path %>" class="pi-join-btn pi-desktop">Sign Out</a>
                             <% end %>
-                            <% if session[:cart].nil? || session[:cart].empty? %>
-                                <a href="<%= checkout_path %>" class="pi-join-btn pi-desktop">
-                                    <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
-                                </a>
-                            <% else %>
-                                <a href="<%= checkout_path %>" class="pi-join-btn pi-desktop">
-                                    <%= fa_icon "cart-arrow-down", base: "solid", class: "pi-arrow-btn" %>
-                                    <%# <%= link_to "#{session[:cart].size}", view_cart_path %> 
-                                    <%= link_to "#{session[:cart].size}", checkout_path %>
-                                </a>
-                            <% end %>
+                            
                         </div>
                     </nav>
                 </div>

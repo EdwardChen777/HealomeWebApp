@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
     def show
         # @addresses = @user.addresses.by_recipient.active.to_a
+        @subscriptions = @current_user.subscriptions.chronological.last
     end
 
     def destroy

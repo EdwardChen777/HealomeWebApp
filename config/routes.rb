@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get "cancel", to: "checkout#cancel"
 
   resources :billings, only: :create
+  get "billings/create", to: "billings#create", as: :manage_billing
   resources :webhooks, only: :create
 
   # get 'show_items' => 'cart#show_items', as: :view_cart

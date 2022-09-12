@@ -5162,9 +5162,16 @@ for price points
   color: #fff;
   padding-top: 5px;
 }
-/* .plan-title{
-  align-items: center;
+
+.plan-section{
+  margin: 0px 100px;
+}
+
+.plan-title{
+  margin: 20px 0px;
+  text-align: center;
 }
 .table{
-  justify-content: center;
-} */
+  margin: 0px 0px;
+  width: 80%;
+}

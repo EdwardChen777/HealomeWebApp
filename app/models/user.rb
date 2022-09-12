@@ -2,7 +2,7 @@ class User < ApplicationRecord
     # mount_uploader :profile, ImageUploader
 
     has_many :cognito
-    has_many :subscription 
+    has_many :subscriptions, dependent: :destroy
     scope :by_role,      -> { order(:role) }
     scope :alphabetical,  -> { order(:last_name, :first_name) }
     scope :employees,    -> { where.not(role: 'customer') }
@@ -25,8 +25,8 @@ class User < ApplicationRecord
     end
 
     def subscribed?
-        if self.subscription.any? 
-            self.subscription.where(status: 'active').any?
+        if self.subscriptions.any? 
+            self.subscriptions.where(status: 'active').any?
         else
             false
         end

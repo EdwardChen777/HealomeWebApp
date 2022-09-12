@@ -42,8 +42,15 @@
 
         <div class="card-body">
             <% if @user.subscribed? %>
-                <a href="<%= billings_path %>" class="pi-btn pi-desktop">Manage Subscriptions</a>
-                <% @user.subscriptions.last.status %>
+                
+                <div>
+                <h4>Subscription End Date</h4>
+                <hr>
+                </div>
+                <%= @subscriptions.end_date %>
+                <br>
+                <br>
+                <a href="<%= manage_billing_path %>" class="pi-btn pi-desktop">Manage Subscriptions</a>
             <% else %>
             <p>You don't have any active subscriptions now.</p>
                 <a href="<%= pricing_path %>" class="pi-btn pi-desktop">Subscribe Now</a>
